@@ -2,17 +2,22 @@ import Foundation
 import UIKit
 
 class UsersListViewModel {
-    private let service: GithubServiceProviderProtocol
+    // MARK: - Observerables
     var users: Observerable<[User]> = Observerable([])
     var errorMessage: Observerable<String?> = Observerable(nil)
     var isLoading: Observerable<Bool> = Observerable(true)
     var naviagteTo: Observerable<UIViewController?> = Observerable(nil)
     
+    // MARK: - Properties
+    private let service: GithubServiceProviderProtocol
+
+    // MARK: - Initializer
     init(service: GithubServiceProviderProtocol = GithubServiceProvider()){
         self.service = service
         self.fetchData()
     }
     
+    // MARK: - Helpers
     func fetchData() {
         service.fetchUsers(completion: { [weak self] (result) in
             guard let self = self else { return }

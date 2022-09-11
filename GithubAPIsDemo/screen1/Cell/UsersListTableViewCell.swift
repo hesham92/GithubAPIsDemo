@@ -1,14 +1,6 @@
-//
-//  artTableViewCell.swift
-//  NYTimesArticles
-//
-//  Created by Hesham Mohammed on 28/06/2022.
-//
-
-import UIKit
 import Kingfisher
 
-
+// MARK: - UsersCellViewProtocol
 protocol UsersCellViewProtocol: AnyObject {
     var username: String { get set }
     var userAvatarUrl: String? { get set }
@@ -32,6 +24,7 @@ class UsersListTableViewCell: UITableViewCell, UsersCellViewProtocol {
     var userAvatarUrl: String? {
         didSet {
             if let url = userAvatarUrl {
+                userAvatarImageView.kf.indicatorType = .activity
                 userAvatarImageView.kf.setImage(with: URL(string: url))
             }
         }

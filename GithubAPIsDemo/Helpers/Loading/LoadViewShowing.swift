@@ -23,8 +23,6 @@ extension LoadingViewShowing where Self: UIViewController {
         view.addSubview(loadingView)
         
         loadingView.translatesAutoresizingMaskIntoConstraints = false
-        loadingView.widthAnchor.constraint(equalToConstant: 100).isActive = true
-        loadingView.heightAnchor.constraint(equalToConstant: 100).isActive = true
         loadingView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         loadingView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
         

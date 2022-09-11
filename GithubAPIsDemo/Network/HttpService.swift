@@ -2,14 +2,17 @@ import Foundation
 
 extension URLSession: URLSessionProtocol {}
 
+// MARK: - URLSessionProtocol
 protocol URLSessionProtocol {
     func dataTask(with request: URLRequest, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTask
 }
 
+// MARK: - HttpServiceProtocol
 protocol HttpServiceProtocol {
     func request<Endpoint: EndpointType, ModelType: Codable>(_ endpoint: Endpoint, modelType: ModelType.Type, responseData: @escaping (Result<ModelType, Error>) -> Void)
 }
 
+// MARK: - HttpService
 class HttpService: HttpServiceProtocol {
     private var session: URLSessionProtocol
 
