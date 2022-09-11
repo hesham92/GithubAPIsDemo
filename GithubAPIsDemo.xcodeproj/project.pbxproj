@@ -10,6 +10,7 @@
 		4F75E144512ED934AA1321C9 /* Pods_GithubAPIsDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59341BA604A6A29B5F2AECD2 /* Pods_GithubAPIsDemoTests.framework */; };
 		5D6EFB57C7118C8D136BAB5A /* Pods_GithubAPIsDemo_GithubAPIsDemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DD3D0B242CEB0F8D0B20CCB /* Pods_GithubAPIsDemo_GithubAPIsDemoUITests.framework */; };
 		8180E6E103D8ACD36DE4FFF0 /* Pods_GithubAPIsDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77064AFD711816A33AEEBA6E /* Pods_GithubAPIsDemo.framework */; };
+		C418F81528CE6F4300039C32 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C418F81428CE6F4300039C32 /* User.swift */; };
 		C42F710428CCC66700F96242 /* LoadViewShowing.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42F710028CCC66700F96242 /* LoadViewShowing.swift */; };
 		C42F710628CCC66700F96242 /* ErrorViewShowing.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42F710328CCC66700F96242 /* ErrorViewShowing.swift */; };
 		C42F710928CCC6FE00F96242 /* UsersListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42F710828CCC6FE00F96242 /* UsersListViewModel.swift */; };
@@ -59,6 +60,7 @@
 		93F3DF9DA6CFC7EB3309C130 /* Pods-GithubAPIsDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubAPIsDemo.release.xcconfig"; path = "Target Support Files/Pods-GithubAPIsDemo/Pods-GithubAPIsDemo.release.xcconfig"; sourceTree = "<group>"; };
 		9E80BCFC2726BF3EBAA9EADC /* Pods-GithubAPIsDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubAPIsDemoTests.debug.xcconfig"; path = "Target Support Files/Pods-GithubAPIsDemoTests/Pods-GithubAPIsDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A908C33A94F551512F4561F5 /* Pods-GithubAPIsDemo-GithubAPIsDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubAPIsDemo-GithubAPIsDemoUITests.debug.xcconfig"; path = "Target Support Files/Pods-GithubAPIsDemo-GithubAPIsDemoUITests/Pods-GithubAPIsDemo-GithubAPIsDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		C418F81428CE6F4300039C32 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		C42F710028CCC66700F96242 /* LoadViewShowing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadViewShowing.swift; sourceTree = "<group>"; };
 		C42F710328CCC66700F96242 /* ErrorViewShowing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorViewShowing.swift; sourceTree = "<group>"; };
 		C42F710828CCC6FE00F96242 /* UsersListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersListViewModel.swift; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 		C418F80C28CE5E4C00039C32 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				C418F81328CE6F1C00039C32 /* Models */,
 				C42F711228CD187400F96242 /* UsersList */,
 				C418F80D28CE5E6600039C32 /* UserRepos */,
 			);
@@ -197,6 +200,14 @@
 				C49F508E28CBBFED00C5CEAC /* GithubEndpoint.swift */,
 			);
 			path = Endpoints;
+			sourceTree = "<group>";
+		};
+		C418F81328CE6F1C00039C32 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C418F81428CE6F4300039C32 /* User.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		C42F70FE28CCC66700F96242 /* Helpers */ = {
@@ -599,6 +610,7 @@
 				C49F509128CBBFED00C5CEAC /* HttpService.swift in Sources */,
 				C49F502D28CB724000C5CEAC /* AppDelegate.swift in Sources */,
 				C49F508B28CB93C200C5CEAC /* UsersListViewController.swift in Sources */,
+				C418F81528CE6F4300039C32 /* User.swift in Sources */,
 				C49F502F28CB724000C5CEAC /* SceneDelegate.swift in Sources */,
 				C42F711128CCCA4D00F96242 /* GithubService.swift in Sources */,
 				C42F710628CCC66700F96242 /* ErrorViewShowing.swift in Sources */,

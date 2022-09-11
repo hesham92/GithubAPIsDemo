@@ -29,22 +29,16 @@ extension GithubEndpoint: Endpoint {
     }
 
     var headers: [String: String]? {
+        let token = "Z2hwXzh3V0Z3ZkdRYUZHTjZuSW40Y3FmR1NEb05jYzVwYTJ0TkxORQ=="
         return ["Content-type": "application/json",
-                "Authorization" : "Bearer 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"]
+                "Authorization" : "Bearer \(token.base64Decode())"
+        ]
     }
 }
 
-struct User: Codable {
-    let username: String
-    let avatarUrl: String
-    let numberOfFollowers: Int?
-    let numberOfPublicRepos: Int?
-
-    private enum CodingKeys : String, CodingKey {
-        case username = "login"
-        case avatarUrl = "avatar_url"
-        case numberOfFollowers = "followers"
-        case numberOfPublicRepos = "public_repos"
+extension String {
+    func base64Decode() -> String {
+        let encodedData = Data(base64Encoded: self)
+        return String(data: encodedData!, encoding: .utf8)!
     }
 }
-
