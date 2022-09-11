@@ -6,6 +6,7 @@ class UsersListViewController: UIViewController, LoadingViewShowing, ErrorViewSh
     
     // MARK: - Properties
     private let viewModel: UsersListViewModel
+    var users: [User] = []
     
     // MARK: - Initializers
     init(viewModel: UsersListViewModel = UsersListViewModel()) {
@@ -37,7 +38,8 @@ class UsersListViewController: UIViewController, LoadingViewShowing, ErrorViewSh
     }
     
     private func setupBindings() {
-        viewModel.users.bind { [weak self] _ in
+        viewModel.users.bind { [weak self] users in
+            self?.users = users
             self?.usersListTableView.reloadData()
         }
         
@@ -59,12 +61,12 @@ class UsersListViewController: UIViewController, LoadingViewShowing, ErrorViewSh
 // MARK: - UITableViewDataSource
 extension UsersListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        viewModel.users.value.count
+        users.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: UsersListTableViewCell.cellIdentifier, for: indexPath) as! UsersListTableViewCell
-        viewModel.configureCell(cell: cell, index: indexPath.row)
+        cell.configure(user: users[indexPath.row])
         
         return cell
     }

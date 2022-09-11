@@ -31,11 +31,6 @@ class UsersListViewModel {
         })
     }
     
-    func configureCell(cell: UsersCellViewProtocol, index: Int) {
-        cell.username = users.value[index].username
-        cell.userAvatarUrl = users.value[index].avatarUrl
-    }
-    
     func didSelectUsersAtIndex(index: Int) {
         naviagteToDetailsScreen.value = ()
     }

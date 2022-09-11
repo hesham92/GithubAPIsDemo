@@ -18,7 +18,7 @@ class GithubServiceProvider: GithubServiceProviderProtocol {
     }
     
     func fetchUsers(completion: @escaping (Result<[User], Error>) -> ()) {
-        api.request(GithubAPI.getUsers, modelType:  [User].self) {response in
+        api.request(GithubAPI.getUsers, modelType: [User].self) {response in
             self.completionQueue.async {
                 completion(response)
             }
