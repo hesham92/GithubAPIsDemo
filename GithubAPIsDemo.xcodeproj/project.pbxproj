@@ -28,9 +28,9 @@
 		C49F505028CB724200C5CEAC /* GithubAPIsDemoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49F504F28CB724200C5CEAC /* GithubAPIsDemoUITestsLaunchTests.swift */; };
 		C49F508B28CB93C200C5CEAC /* UsersListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49F508928CB93C200C5CEAC /* UsersListViewController.swift */; };
 		C49F508C28CB93C200C5CEAC /* UsersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C49F508A28CB93C200C5CEAC /* UsersViewController.xib */; };
-		C49F509028CBBFED00C5CEAC /* GithubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49F508E28CBBFED00C5CEAC /* GithubAPI.swift */; };
+		C49F509028CBBFED00C5CEAC /* GithubEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49F508E28CBBFED00C5CEAC /* GithubEndpoint.swift */; };
 		C49F509128CBBFED00C5CEAC /* HttpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49F508F28CBBFED00C5CEAC /* HttpService.swift */; };
-		C49F509328CBC15400C5CEAC /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49F509228CBC15400C5CEAC /* Endpoint.swift */; };
+		C49F509328CBC15400C5CEAC /* EndpointProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49F509228CBC15400C5CEAC /* EndpointProtocol.swift */; };
 		C4A3403828CE372A004BC3CC /* UsersListCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A3403728CE372A004BC3CC /* UsersListCellViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -81,9 +81,9 @@
 		C49F504F28CB724200C5CEAC /* GithubAPIsDemoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubAPIsDemoUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		C49F508928CB93C200C5CEAC /* UsersListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListViewController.swift; sourceTree = "<group>"; };
 		C49F508A28CB93C200C5CEAC /* UsersViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UsersViewController.xib; sourceTree = "<group>"; };
-		C49F508E28CBBFED00C5CEAC /* GithubAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubAPI.swift; sourceTree = "<group>"; };
+		C49F508E28CBBFED00C5CEAC /* GithubEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubEndpoint.swift; sourceTree = "<group>"; };
 		C49F508F28CBBFED00C5CEAC /* HttpService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpService.swift; sourceTree = "<group>"; };
-		C49F509228CBC15400C5CEAC /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		C49F509228CBC15400C5CEAC /* EndpointProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointProtocol.swift; sourceTree = "<group>"; };
 		C4A3403728CE372A004BC3CC /* UsersListCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListCellViewModel.swift; sourceTree = "<group>"; };
 		E4CD03A15E693A505F95FF4B /* Pods-GithubAPIsDemo-GithubAPIsDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubAPIsDemo-GithubAPIsDemoUITests.release.xcconfig"; path = "Target Support Files/Pods-GithubAPIsDemo-GithubAPIsDemoUITests/Pods-GithubAPIsDemo-GithubAPIsDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
 		F52A382746AC6CEA9EDEC65A /* Pods-GithubAPIsDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubAPIsDemoTests.release.xcconfig"; path = "Target Support Files/Pods-GithubAPIsDemoTests/Pods-GithubAPIsDemoTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -130,6 +130,75 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		C418F80928CE5D3800039C32 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C42F710B28CCC8A900F96242 /* UsersListTableViewCell.swift */,
+				C42F710C28CCC8A900F96242 /* UsersListTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C418F80A28CE5DAA00039C32 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C49F508A28CB93C200C5CEAC /* UsersViewController.xib */,
+				C49F508928CB93C200C5CEAC /* UsersListViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C418F80B28CE5DC600039C32 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C42F710828CCC6FE00F96242 /* UsersListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C418F80C28CE5E4C00039C32 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				C42F711228CD187400F96242 /* UsersList */,
+				C418F80D28CE5E6600039C32 /* UserRepos */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		C418F80D28CE5E6600039C32 /* UserRepos */ = {
+			isa = PBXGroup;
+			children = (
+				C418F80E28CE5E8D00039C32 /* View */,
+			);
+			path = UserRepos;
+			sourceTree = "<group>";
+		};
+		C418F80E28CE5E8D00039C32 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C42F711728CD6E8800F96242 /* ReposViewController.swift */,
+				C42F711828CD6E8800F96242 /* ReposViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C418F80F28CE5EAE00039C32 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				C49F508F28CBBFED00C5CEAC /* HttpService.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		C418F81128CE5F2900039C32 /* Endpoints */ = {
+			isa = PBXGroup;
+			children = (
+				C49F509228CBC15400C5CEAC /* EndpointProtocol.swift */,
+				C49F508E28CBBFED00C5CEAC /* GithubEndpoint.swift */,
+			);
+			path = Endpoints;
+			sourceTree = "<group>";
+		};
 		C42F70FE28CCC66700F96242 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -159,7 +228,7 @@
 		C42F710728CCC6FE00F96242 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				C42F710828CCC6FE00F96242 /* UsersListViewModel.swift */,
+				C4A3403728CE372A004BC3CC /* UsersListCellViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -167,9 +236,8 @@
 		C42F710A28CCC8A900F96242 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				C4A3403728CE372A004BC3CC /* UsersListCellViewModel.swift */,
-				C42F710B28CCC8A900F96242 /* UsersListTableViewCell.swift */,
-				C42F710C28CCC8A900F96242 /* UsersListTableViewCell.xib */,
+				C418F80928CE5D3800039C32 /* View */,
+				C42F710728CCC6FE00F96242 /* ViewModel */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -182,24 +250,20 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
-		C42F711228CD187400F96242 /* screen1 */ = {
+		C42F711228CD187400F96242 /* UsersList */ = {
 			isa = PBXGroup;
 			children = (
+				C418F80A28CE5DAA00039C32 /* View */,
+				C418F80B28CE5DC600039C32 /* ViewModel */,
 				C42F710A28CCC8A900F96242 /* Cell */,
-				C42F710728CCC6FE00F96242 /* ViewModel */,
-				C49F508928CB93C200C5CEAC /* UsersListViewController.swift */,
-				C42F711728CD6E8800F96242 /* ReposViewController.swift */,
-				C42F711828CD6E8800F96242 /* ReposViewController.xib */,
-				C49F508A28CB93C200C5CEAC /* UsersViewController.xib */,
 			);
-			path = screen1;
+			path = UsersList;
 			sourceTree = "<group>";
 		};
 		C42F711328CD228800F96242 /* GithubService */ = {
 			isa = PBXGroup;
 			children = (
 				C42F711028CCCA4D00F96242 /* GithubService.swift */,
-				C49F508E28CBBFED00C5CEAC /* GithubAPI.swift */,
 			);
 			path = GithubService;
 			sourceTree = "<group>";
@@ -238,10 +302,11 @@
 			isa = PBXGroup;
 			children = (
 				C49F502C28CB724000C5CEAC /* AppDelegate.swift */,
-				C49F508D28CBBFED00C5CEAC /* Network */,
-				C42F710F28CCCA4D00F96242 /* Services */,
-				C42F711228CD187400F96242 /* screen1 */,
 				C49F502E28CB724000C5CEAC /* SceneDelegate.swift */,
+				C49F508D28CBBFED00C5CEAC /* Network */,
+				C418F81128CE5F2900039C32 /* Endpoints */,
+				C42F710F28CCCA4D00F96242 /* Services */,
+				C418F80C28CE5E4C00039C32 /* Features */,
 				C42F70FE28CCC66700F96242 /* Helpers */,
 				C49F503528CB724200C5CEAC /* Assets.xcassets */,
 				C49F503728CB724200C5CEAC /* LaunchScreen.storyboard */,
@@ -270,8 +335,7 @@
 		C49F508D28CBBFED00C5CEAC /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				C49F508F28CBBFED00C5CEAC /* HttpService.swift */,
-				C49F509228CBC15400C5CEAC /* Endpoint.swift */,
+				C418F80F28CE5EAE00039C32 /* Core */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -527,7 +591,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C49F509028CBBFED00C5CEAC /* GithubAPI.swift in Sources */,
+				C49F509028CBBFED00C5CEAC /* GithubEndpoint.swift in Sources */,
 				C4A3403828CE372A004BC3CC /* UsersListCellViewModel.swift in Sources */,
 				C42F711528CD259100F96242 /* Observerable.swift in Sources */,
 				C42F710428CCC66700F96242 /* LoadViewShowing.swift in Sources */,
@@ -538,7 +602,7 @@
 				C49F502F28CB724000C5CEAC /* SceneDelegate.swift in Sources */,
 				C42F711128CCCA4D00F96242 /* GithubService.swift in Sources */,
 				C42F710628CCC66700F96242 /* ErrorViewShowing.swift in Sources */,
-				C49F509328CBC15400C5CEAC /* Endpoint.swift in Sources */,
+				C49F509328CBC15400C5CEAC /* EndpointProtocol.swift in Sources */,
 				C42F710928CCC6FE00F96242 /* UsersListViewModel.swift in Sources */,
 				C42F710D28CCC8A900F96242 /* UsersListTableViewCell.swift in Sources */,
 			);

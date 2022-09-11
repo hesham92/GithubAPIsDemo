@@ -19,7 +19,7 @@ class GithubService: GithubServiceProtocol {
     }
     
     func fetchUsers(completion: @escaping (Result<[User], Error>) -> ()) {
-        api.request(GithubAPI.getUsers, modelType: [User].self) {response in
+        api.request(GithubEndpoint.getUsers, modelType: [User].self) {response in
             self.completionQueue.async {
                 completion(response)
             }
@@ -27,7 +27,7 @@ class GithubService: GithubServiceProtocol {
     }
     
     func fetchUser(username: String, completion: @escaping (Result<User, Error>) -> ()) {
-        api.request(GithubAPI.getUser(username: username), modelType: User.self) {response in
+        api.request(GithubEndpoint.getUser(username: username), modelType: User.self) {response in
             self.completionQueue.async {
                 completion(response)
             }

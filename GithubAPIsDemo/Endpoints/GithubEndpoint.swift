@@ -1,11 +1,11 @@
 import Foundation
 
-enum GithubAPI {
+enum GithubEndpoint {
     case getUsers
     case getUser(username: String)
 }
 
-extension GithubAPI: Endpoint {
+extension GithubEndpoint: Endpoint {
     var baseURL: URL { return URL(string: "https://api.github.com/")! }
 
     var path: String {
@@ -30,7 +30,7 @@ extension GithubAPI: Endpoint {
 
     var headers: [String: String]? {
         return ["Content-type": "application/json",
-                "Authorization" : "Bearer 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"]
+                "Authorization" : "Bearer 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"]
     }
 }
 
