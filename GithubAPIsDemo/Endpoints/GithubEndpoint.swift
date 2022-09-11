@@ -30,7 +30,7 @@ extension GithubEndpoint: Endpoint {
 
     var headers: [String: String]? {
         return ["Content-type": "application/json",
-                "Authorization" : "Bearer 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"]
+                "Authorization" : "Bearer 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"]
     }
 }
 
