@@ -8,10 +8,10 @@ class UsersListViewModel {
     var naviagteToDetailsScreen: Observerable<Void> = Observerable(())
     
     // MARK: - Properties
-    private let service: GithubServiceProviderProtocol
+    private let service: GithubServiceProtocol
 
     // MARK: - Initializer
-    init(service: GithubServiceProviderProtocol = GithubServiceProvider()){
+    init(service: GithubServiceProtocol = GithubService()){
         self.service = service
         self.fetchData()
     }

@@ -2,6 +2,7 @@ import Foundation
 
 enum GithubAPI {
     case getUsers
+    case getUser(username: String)
 }
 
 extension GithubAPI: Endpoint {
@@ -11,12 +12,14 @@ extension GithubAPI: Endpoint {
         switch self {
         case .getUsers:
             return "users"
+        case let .getUser(username):
+            return "users/\(username)"
         }
     }
 
     var method: HttpMethod {
         switch self {
-        case .getUsers:
+        case .getUsers, .getUser:
             return .get
         }
     }
@@ -26,16 +29,22 @@ extension GithubAPI: Endpoint {
     }
 
     var headers: [String: String]? {
-        return ["Content-type": "application/json"]
+        return ["Content-type": "application/json",
+                "Authorization" : "Bearer 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"]
     }
 }
 
 struct User: Codable {
     let username: String
     let avatarUrl: String
-    
+    let numberOfFollowers: Int?
+    let numberOfPublicRepos: Int?
+
     private enum CodingKeys : String, CodingKey {
-        case username = "login", avatarUrl = "avatar_url"
+        case username = "login"
+        case avatarUrl = "avatar_url"
+        case numberOfFollowers = "followers"
+        case numberOfPublicRepos = "public_repos"
     }
 }
 

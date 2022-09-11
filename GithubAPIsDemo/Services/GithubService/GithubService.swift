@@ -1,12 +1,13 @@
 import Foundation
 
 // MARK: - GithubServiceProviderProtocol
-protocol GithubServiceProviderProtocol {
+protocol GithubServiceProtocol {
     func fetchUsers(completion: @escaping (Result<[User], Error>) -> ())
+    func fetchUser(username: String, completion: @escaping (Result<User, Error>) -> ())
 }
 
 // MARK: - GithubServiceProvider
-class GithubServiceProvider: GithubServiceProviderProtocol {
+class GithubService: GithubServiceProtocol {
     // MARK: - Private
     private var api: HttpServiceProtocol
     private var completionQueue: DispatchQueue
@@ -19,6 +20,14 @@ class GithubServiceProvider: GithubServiceProviderProtocol {
     
     func fetchUsers(completion: @escaping (Result<[User], Error>) -> ()) {
         api.request(GithubAPI.getUsers, modelType: [User].self) {response in
+            self.completionQueue.async {
+                completion(response)
+            }
+        }
+    }
+    
+    func fetchUser(username: String, completion: @escaping (Result<User, Error>) -> ()) {
+        api.request(GithubAPI.getUser(username: username), modelType: User.self) {response in
             self.completionQueue.async {
                 completion(response)
             }
