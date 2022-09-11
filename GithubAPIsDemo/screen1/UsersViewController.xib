@@ -8,8 +8,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UsersViewController" customModule="GithubAPIsDemo" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UsersListViewController" customModule="GithubAPIsDemo" customModuleProvider="target">
             <connections>
+                <outlet property="usersListTableView" destination="eE0-4l-cb9" id="wvy-Zu-cL1"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,16 +19,23 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j5z-ph-bf1">
-                    <rect key="frame" x="177" y="220" width="42" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="eE0-4l-cb9">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="ZRO-or-vmR"/>
+                        <outlet property="delegate" destination="-1" id="l8h-UN-zJF"/>
+                    </connections>
+                </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="eE0-4l-cb9" secondAttribute="trailing" id="4pf-p3-kF7"/>
+                <constraint firstItem="eE0-4l-cb9" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="7k0-0n-Ts2"/>
+                <constraint firstItem="eE0-4l-cb9" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="JjB-o1-bnO"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="eE0-4l-cb9" secondAttribute="bottom" id="R7U-Zg-vSq"/>
+            </constraints>
             <point key="canvasLocation" x="139" y="135"/>
         </view>
     </objects>
