@@ -17,7 +17,7 @@ class UsersListViewModel {
     }
     
     // MARK: - Helpers
-    func fetchData() {
+    private func fetchData() {
         service.fetchUsers(completion: { [weak self] (result) in
             guard let self = self else { return }
             self.isLoading.value = false
