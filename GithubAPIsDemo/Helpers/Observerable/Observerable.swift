@@ -15,6 +15,10 @@ class Observerable<T> {
     }
     
     func bind(_ listener: @escaping (T) -> Void) {
+        self.listeners.append(listener)
+    }
+    
+    func bindAndApply(_ listener: @escaping (T) -> Void) {
         listener(value)
         self.listeners.append(listener)
     }

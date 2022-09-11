@@ -5,7 +5,7 @@ class UsersListViewController: UIViewController, LoadingViewShowing, ErrorViewSh
     @IBOutlet weak private var usersListTableView: UITableView!
     
     // MARK: - Properties
-    private var viewModel: UsersListViewModel
+    private let viewModel: UsersListViewModel
     
     // MARK: - Initializers
     init(viewModel: UsersListViewModel = UsersListViewModel()) {
@@ -49,8 +49,8 @@ class UsersListViewController: UIViewController, LoadingViewShowing, ErrorViewSh
             self?.handleLoading(isLoading: isLoading)
         }
         
-        viewModel.naviagteTo.bind {[weak self] viewController in
-            guard let viewController = viewController else { return }
+        viewModel.naviagteToDetailsScreen.bind { [weak self] in
+            let viewController = ReposViewController.makeViewController()
             self?.navigationController?.pushViewController(viewController, animated: true)
         }
     }

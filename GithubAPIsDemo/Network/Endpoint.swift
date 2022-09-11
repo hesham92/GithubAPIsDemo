@@ -1,6 +1,6 @@
 import Foundation
 
-protocol EndpointType {
+protocol Endpoint {
     var baseURL: URL { get }
     var path: String { get }
     var method: HttpMethod { get }
@@ -9,7 +9,7 @@ protocol EndpointType {
     func urlRequest() -> URLRequest
 }
 
-extension EndpointType {
+extension Endpoint {
     func urlRequest() -> URLRequest {
         let urlPath = [self.baseURL.absoluteString, self.path].joined()
         let url = URL(string: urlPath)!

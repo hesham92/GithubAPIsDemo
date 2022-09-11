@@ -1,12 +1,11 @@
 import Foundation
-import UIKit
 
 class UsersListViewModel {
     // MARK: - Observerables
     var users: Observerable<[User]> = Observerable([])
-    var errorMessage: Observerable<String?> = Observerable(nil)
+    var errorMessage: Observerable<String> = Observerable("")
     var isLoading: Observerable<Bool> = Observerable(true)
-    var naviagteTo: Observerable<UIViewController?> = Observerable(nil)
+    var naviagteToDetailsScreen: Observerable<Void> = Observerable(())
     
     // MARK: - Properties
     private let service: GithubServiceProviderProtocol
@@ -38,7 +37,7 @@ class UsersListViewModel {
     }
     
     func didSelectUsersAtIndex(index: Int) {
-        naviagteTo.value = ReposViewController.makeViewController()
+        naviagteToDetailsScreen.value = ()
     }
 }
 

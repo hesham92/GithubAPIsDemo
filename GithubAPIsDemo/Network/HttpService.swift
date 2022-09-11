@@ -9,7 +9,7 @@ protocol URLSessionProtocol {
 
 // MARK: - HttpServiceProtocol
 protocol HttpServiceProtocol {
-    func request<Endpoint: EndpointType, ModelType: Codable>(_ endpoint: Endpoint, modelType: ModelType.Type, responseData: @escaping (Result<ModelType, Error>) -> Void)
+    func request<ModelType: Codable>(_ endpoint: Endpoint, modelType: ModelType.Type, responseData: @escaping (Result<ModelType, Error>) -> Void)
 }
 
 // MARK: - HttpService
@@ -20,7 +20,7 @@ class HttpService: HttpServiceProtocol {
         self.session = session
     }
 
-    func request<Endpoint: EndpointType, ModelType: Codable>(_ endpoint: Endpoint, modelType: ModelType.Type, responseData: @escaping (Result<ModelType, Error>) -> Void) {
+    func request<ModelType: Codable>(_ endpoint: Endpoint, modelType: ModelType.Type, responseData: @escaping (Result<ModelType, Error>) -> Void) {
         let request = endpoint.urlRequest()
         let task = session.dataTask(with: request) { data, _, error in
             guard let data = data, error == nil else {

@@ -30,7 +30,7 @@
 		C49F508C28CB93C200C5CEAC /* UsersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C49F508A28CB93C200C5CEAC /* UsersViewController.xib */; };
 		C49F509028CBBFED00C5CEAC /* GithubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49F508E28CBBFED00C5CEAC /* GithubAPI.swift */; };
 		C49F509128CBBFED00C5CEAC /* HttpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49F508F28CBBFED00C5CEAC /* HttpService.swift */; };
-		C49F509328CBC15400C5CEAC /* EndpointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49F509228CBC15400C5CEAC /* EndpointType.swift */; };
+		C49F509328CBC15400C5CEAC /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49F509228CBC15400C5CEAC /* Endpoint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,7 +82,7 @@
 		C49F508A28CB93C200C5CEAC /* UsersViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UsersViewController.xib; sourceTree = "<group>"; };
 		C49F508E28CBBFED00C5CEAC /* GithubAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubAPI.swift; sourceTree = "<group>"; };
 		C49F508F28CBBFED00C5CEAC /* HttpService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpService.swift; sourceTree = "<group>"; };
-		C49F509228CBC15400C5CEAC /* EndpointType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointType.swift; sourceTree = "<group>"; };
+		C49F509228CBC15400C5CEAC /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		E4CD03A15E693A505F95FF4B /* Pods-GithubAPIsDemo-GithubAPIsDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubAPIsDemo-GithubAPIsDemoUITests.release.xcconfig"; path = "Target Support Files/Pods-GithubAPIsDemo-GithubAPIsDemoUITests/Pods-GithubAPIsDemo-GithubAPIsDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
 		F52A382746AC6CEA9EDEC65A /* Pods-GithubAPIsDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubAPIsDemoTests.release.xcconfig"; path = "Target Support Files/Pods-GithubAPIsDemoTests/Pods-GithubAPIsDemoTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -268,7 +268,7 @@
 			isa = PBXGroup;
 			children = (
 				C49F508F28CBBFED00C5CEAC /* HttpService.swift */,
-				C49F509228CBC15400C5CEAC /* EndpointType.swift */,
+				C49F509228CBC15400C5CEAC /* Endpoint.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -534,7 +534,7 @@
 				C49F502F28CB724000C5CEAC /* SceneDelegate.swift in Sources */,
 				C42F711128CCCA4D00F96242 /* GithubServiceProvider.swift in Sources */,
 				C42F710628CCC66700F96242 /* ErrorViewShowing.swift in Sources */,
-				C49F509328CBC15400C5CEAC /* EndpointType.swift in Sources */,
+				C49F509328CBC15400C5CEAC /* Endpoint.swift in Sources */,
 				C42F710928CCC6FE00F96242 /* UsersListViewModel.swift in Sources */,
 				C42F710D28CCC8A900F96242 /* UsersListTableViewCell.swift in Sources */,
 			);
@@ -634,7 +634,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -688,7 +688,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

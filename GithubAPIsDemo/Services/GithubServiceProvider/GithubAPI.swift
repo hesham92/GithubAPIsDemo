@@ -4,7 +4,7 @@ enum GithubAPI {
     case getUsers
 }
 
-extension GithubAPI: EndpointType {
+extension GithubAPI: Endpoint {
     var baseURL: URL { return URL(string: "https://api.github.com/")! }
 
     var path: String {
