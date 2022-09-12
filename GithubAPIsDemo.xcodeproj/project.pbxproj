@@ -199,7 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				C49F509228CBC15400C5CEAC /* EndpointProtocol.swift */,
-				C49F508E28CBBFED00C5CEAC /* GithubEndpoint.swift */,
+				C418F81928CE835600039C32 /* GithubEndpoint */,
 			);
 			path = Endpoints;
 			sourceTree = "<group>";
@@ -218,6 +218,14 @@
 				C418F81728CE811700039C32 /* String+ext.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C418F81928CE835600039C32 /* GithubEndpoint */ = {
+			isa = PBXGroup;
+			children = (
+				C49F508E28CBBFED00C5CEAC /* GithubEndpoint.swift */,
+			);
+			path = GithubEndpoint;
 			sourceTree = "<group>";
 		};
 		C42F70FE28CCC66700F96242 /* Helpers */ = {
