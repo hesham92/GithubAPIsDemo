@@ -31,6 +31,7 @@ class UsersListViewController: UIViewController, LoadingViewShowing, ErrorViewSh
     
     // MARK: - Configuration
     private func setupView() {
+        title = "Users"
         usersListTableView.register(UsersListTableViewCell.cellNib, forCellReuseIdentifier: UsersListTableViewCell.cellIdentifier)
     }
     
@@ -44,7 +45,7 @@ class UsersListViewController: UIViewController, LoadingViewShowing, ErrorViewSh
             self?.showErrorMessage(errorMessage)
         }
         
-        viewModel.isLoading.bind { [weak self] isLoading in
+        viewModel.isLoading.bindAndApply { [weak self] isLoading in
             self?.handleLoading(isLoading: isLoading)
         }
         

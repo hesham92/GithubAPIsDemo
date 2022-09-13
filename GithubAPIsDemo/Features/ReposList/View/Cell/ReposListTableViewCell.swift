@@ -9,9 +9,12 @@ class ReposListTableViewCell: UITableViewCell {
     
     // MARK: - Configuration
     func configure(repo: Repo) {
-        self.usernameLabel.text = repo.name
+        self.usernameLabel.text = "Name: " + repo.name
         self.descriptionLabel.text = repo.description
-        self.licenseLabel.text = repo.license?.name
+        self.licenseLabel.text = "License: " + (repo.license?.name ?? "")
+        
+        self.descriptionLabel.isHidden = repo.description == nil
+        self.licenseLabel.isHidden = repo.license?.name == nil
     }
     
     override func prepareForReuse() {

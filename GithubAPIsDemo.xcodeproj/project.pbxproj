@@ -176,8 +176,8 @@
 			isa = PBXGroup;
 			children = (
 				C433ED6F28D0D89B00B4F0E5 /* Shared */,
-				C418F80D28CE5E6600039C32 /* ReposList */,
 				C42F711228CD187400F96242 /* UsersList */,
+				C418F80D28CE5E6600039C32 /* ReposList */,
 				C433ED5728D0B23600B4F0E5 /* RepoForks */,
 			);
 			path = Features;

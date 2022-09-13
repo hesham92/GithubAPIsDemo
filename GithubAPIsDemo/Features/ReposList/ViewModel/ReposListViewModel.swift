@@ -31,7 +31,6 @@ class ReposListViewModel {
             self.isLoading.value = false
             switch(result) {
             case .success(let users):
-                print(users)
                 self.repos.value = users
             case .failure(let error):
                 self.errorMessage.value = error.localizedDescription

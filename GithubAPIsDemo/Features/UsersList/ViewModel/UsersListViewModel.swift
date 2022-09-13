@@ -29,7 +29,6 @@ class UsersListViewModel {
             self.isLoading.value = false
             switch(result) {
             case .success(let users):
-                print(users)
                 self.users.value = users
             case .failure(let error):
                 self.errorMessage.value = error.localizedDescription

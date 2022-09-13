@@ -32,6 +32,7 @@ class ReposListViewController: UIViewController, LoadingViewShowing, ErrorViewSh
     
     // MARK: - Configuration
     private func setupView() {
+        title = "Repos"
         reposListTableView.register(ReposListTableViewCell.cellNib, forCellReuseIdentifier: ReposListTableViewCell.cellIdentifier)
     }
     
@@ -45,7 +46,7 @@ class ReposListViewController: UIViewController, LoadingViewShowing, ErrorViewSh
             self?.showErrorMessage(errorMessage)
         }
         
-        viewModel.isLoading.bind {[weak self] isLoading in
+        viewModel.isLoading.bindAndApply {[weak self] isLoading in
             self?.handleLoading(isLoading: isLoading)
         }
         

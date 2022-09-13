@@ -32,6 +32,7 @@ class RepoForksListViewController: UIViewController, LoadingViewShowing, ErrorVi
     
     // MARK: - Configuration
     private func setupView() {
+        title = "Forks"
         repoForksLListTableView.register(RepoForksListTableViewCell.cellNib, forCellReuseIdentifier: RepoForksListTableViewCell.cellIdentifier)
     }
     
@@ -45,7 +46,7 @@ class RepoForksListViewController: UIViewController, LoadingViewShowing, ErrorVi
             self?.showErrorMessage(errorMessage)
         }
         
-        viewModel.isLoading.bind {[weak self] isLoading in
+        viewModel.isLoading.bindAndApply {[weak self] isLoading in
             self?.handleLoading(isLoading: isLoading)
         }
     }
