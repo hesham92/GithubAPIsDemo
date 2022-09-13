@@ -10,6 +10,7 @@ class UsersListTableViewCell: UITableViewCell {
     // MARK: - Configuration
     func configure(user: User) {
         viewModel = UsersListCellViewModel(user: user)
+        viewModel?.viewDidLoad()
         
         viewModel?.user.bindAndApply { [weak self] user in
             self?.usernameLabel.text = "Username: " + user.username

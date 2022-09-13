@@ -10,14 +10,17 @@ class UsersListCellViewModel {
     init(service: GithubServiceProtocol = GithubService(), user: User){
         self.service = service
         self.user = Observerable(user)
-        
-        fetchData()
+    }
+    
+    // MARK: - View Actions
+    func viewDidLoad() {
+        fetchFullUserInfo()
     }
     
     // MARK: - Private
 
     // MARK: - GithubServiceProtocol
-    private func fetchData() {
+    private func fetchFullUserInfo() {
         service.fetchUser(username: user.value.username, completion: { [weak self] (result) in
             guard let self = self else { return }
             switch(result) {
