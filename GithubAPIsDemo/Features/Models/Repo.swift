@@ -1,7 +1,11 @@
 import Foundation
 
 struct Repo: Codable {
-    let username: String
+    let name: String
     let description: String?
-    let license: String?
+    let license: License?
+}
+
+struct License: Codable {
+    let name: String
 }

@@ -9,13 +9,12 @@ class UsersListViewController: UIViewController, LoadingViewShowing, ErrorViewSh
     var users: [User] = []
     
     // MARK: - Initializers
-    init(viewModel: UsersListViewModel = UsersListViewModel()) {
+    init(viewModel: UsersListViewModel) {
         self.viewModel = viewModel
-        super.init(nibName: "UsersViewController", bundle: nil)
+        super.init(nibName: "UsersListViewController", bundle: nil)
     }
     
     required init?(coder: NSCoder) {
-        assertionFailure("init(coder:) has not been implemented")
         return nil
     }
     
@@ -28,7 +27,8 @@ class UsersListViewController: UIViewController, LoadingViewShowing, ErrorViewSh
     }
     
     static func makeViewController() -> UsersListViewController {
-        let viewController = UsersListViewController()
+        let viewModel = UsersListViewModel()
+        let viewController = UsersListViewController(viewModel: viewModel)
         return viewController
     }
     
@@ -43,16 +43,16 @@ class UsersListViewController: UIViewController, LoadingViewShowing, ErrorViewSh
             self?.usersListTableView.reloadData()
         }
         
-        viewModel.errorMessage.bind {[weak self] errorMessage in
+        viewModel.errorMessage.bind { [weak self] errorMessage in
             self?.showErrorMessage(errorMessage)
         }
         
-        viewModel.isLoading.bind {[weak self] isLoading in
+        viewModel.isLoading.bind { [weak self] isLoading in
             self?.handleLoading(isLoading: isLoading)
         }
         
-        viewModel.naviagteToDetailsScreen.bind { [weak self] in
-            let viewController = ReposViewController.makeViewController()
+        viewModel.naviagteToReposScreen.bind { [weak self] username in
+            let viewController = ReposListViewController.makeViewController(username: username)
             self?.navigationController?.pushViewController(viewController, animated: true)
         }
     }

@@ -1,37 +1,39 @@
 import Foundation
 
-class UsersListViewModel {
+class ReposListViewModel {
     // MARK: - Observerables
-    var users: Observerable<[User]> = Observerable([])
+    var repos: Observerable<[Repo]> = Observerable([])
     var errorMessage: Observerable<String> = Observerable("")
     var isLoading: Observerable<Bool> = Observerable(true)
-    var naviagteToReposScreen: Observerable<String> = Observerable("")
+    var naviagteToDetailsScreen: Observerable<Void> = Observerable(())
+    var username: String
     
     // MARK: - Properties
     private let service: GithubServiceProtocol
-
+    
     // MARK: - Initializer
-    init(service: GithubServiceProtocol = GithubService()){
+    init(service: GithubServiceProtocol = GithubService(), username: String){
         self.service = service
-        self.fetchData()
+        self.username = username
+        self.fetchUserRepos(username: username)
     }
     
     // MARK: - Helpers
-    private func fetchData() {
-        service.fetchUsers(completion: { [weak self] (result) in
+    private func fetchUserRepos(username: String) {
+        service.fetchUserRepos(username: username, completion: { [weak self] (result) in
             guard let self = self else { return }
             self.isLoading.value = false
             switch(result) {
             case .success(let users):
                 print(users)
-                self.users.value = users
+                self.repos.value = users
             case .failure(let error):
                 self.errorMessage.value = error.localizedDescription
             }
         })
     }
     
-    func didSelectUsersAtIndex(index: Int) {
-        naviagteToReposScreen.value = users.value[index].username
+    func didSelectRepoAtIndex(index: Int) {
+        naviagteToDetailsScreen.value = ()
     }
 }

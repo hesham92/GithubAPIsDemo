@@ -17,7 +17,7 @@ extension GithubEndpoint: Endpoint {
         case let .getUser(username):
             return "users/\(username)"
         case let .getUserRepos(username):
-            return "users/\(username)repos/"
+            return "users/\(username)/repos"
         case let .getRepoForks(username, repoName):
             return "repos/\(username)/\(repoName)/forks"
         }

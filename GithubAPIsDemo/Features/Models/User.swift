@@ -13,4 +13,3 @@ struct User: Codable {
         case numberOfPublicRepos = "public_repos"
     }
 }
-
