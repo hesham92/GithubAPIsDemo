@@ -3,7 +3,7 @@ import Foundation
 struct Fork: Codable, Equatable {
     let owner: Owner
 }
-struct Owner: Codable {
+struct Owner: Codable, Equatable {
     let username: String
     let avatarUrl: String
     

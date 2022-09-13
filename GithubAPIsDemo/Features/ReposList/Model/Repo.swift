@@ -6,6 +6,6 @@ struct Repo: Codable, Equatable {
     let license: License?
 }
 
-struct License: Codable {
+struct License: Codable, Equatable {
     let name: String
 }
