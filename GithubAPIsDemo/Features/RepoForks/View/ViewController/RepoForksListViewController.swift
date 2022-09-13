@@ -1,12 +1,7 @@
 import UIKit
 
 class RepoForksListViewController: UIViewController, LoadingViewShowing, ErrorViewShowing {
-    // MARK: - Outlets
-    @IBOutlet weak private var repoForksLListTableView: UITableView!
-    
-    // MARK: - Properties
-    private let viewModel: RepoForksListViewModel
-    var forks: [Fork] = []
+    // MARK: - Public
     
     // MARK: - Initializers
     init(viewModel: RepoForksListViewModel) {
@@ -34,6 +29,8 @@ class RepoForksListViewController: UIViewController, LoadingViewShowing, ErrorVi
     }
     
     // MARK: - Private
+    
+    // MARK: - Configuration
     private func setupView() {
         repoForksLListTableView.register(RepoForksListTableViewCell.cellNib, forCellReuseIdentifier: RepoForksListTableViewCell.cellIdentifier)
     }
@@ -51,8 +48,14 @@ class RepoForksListViewController: UIViewController, LoadingViewShowing, ErrorVi
         viewModel.isLoading.bind {[weak self] isLoading in
             self?.handleLoading(isLoading: isLoading)
         }
-        
     }
+    
+    // MARK: - Properties
+    private let viewModel: RepoForksListViewModel
+    private var forks: [Fork] = []
+    
+    // MARK: - Outlets
+    @IBOutlet weak private var repoForksLListTableView: UITableView!
 }
 
 // MARK: - UITableViewDataSource

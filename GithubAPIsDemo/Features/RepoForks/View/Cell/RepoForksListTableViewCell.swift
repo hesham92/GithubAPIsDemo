@@ -1,9 +1,11 @@
 import Kingfisher
 
 class RepoForksListTableViewCell: UITableViewCell {
-    // MARK: - Outlets
-    @IBOutlet weak var ownerUsernameLabel: UILabel!
-    @IBOutlet weak var ownerAvatarImageView: UIImageView!
+    // MARK: - Public
+
+    // MARK: Constants
+    static let cellIdentifier: String = "RepoForksListTableViewCell"
+    static let cellNib: UINib = UINib(nibName: "RepoForksListTableViewCell", bundle: nil)
     
     func configure(fork: Fork) {
         ownerUsernameLabel.text = fork.owner.username
@@ -11,12 +13,15 @@ class RepoForksListTableViewCell: UITableViewCell {
         ownerAvatarImageView.kf.setImage(with: URL(string: fork.owner.avatarUrl))
     }
     
+    // MARK: - LifeCycle
     override func prepareForReuse() {
         ownerUsernameLabel.text = ""
         ownerAvatarImageView.image = nil
     }
     
-    // MARK: Constants
-    static let cellIdentifier: String = "RepoForksListTableViewCell"
-    static let cellNib: UINib = UINib(nibName: "RepoForksListTableViewCell", bundle: nil)
+    // MARK: - Private
+
+    // MARK: - Outlets
+    @IBOutlet weak private var ownerUsernameLabel: UILabel!
+    @IBOutlet weak private var ownerAvatarImageView: UIImageView!
 }

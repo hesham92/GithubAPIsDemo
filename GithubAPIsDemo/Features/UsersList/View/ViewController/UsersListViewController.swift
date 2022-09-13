@@ -1,12 +1,7 @@
 import UIKit
 
 class UsersListViewController: UIViewController, LoadingViewShowing, ErrorViewShowing {
-    // MARK: - Outlets
-    @IBOutlet weak private var usersListTableView: UITableView!
-    
-    // MARK: - Properties
-    private let viewModel: UsersListViewModel
-    var users: [User] = []
+    // MARK: - Public
     
     // MARK: - Initializers
     init(viewModel: UsersListViewModel) {
@@ -33,6 +28,8 @@ class UsersListViewController: UIViewController, LoadingViewShowing, ErrorViewSh
     }
     
     // MARK: - Private
+    
+    // MARK: - Configuration
     private func setupView() {
         usersListTableView.register(UsersListTableViewCell.cellNib, forCellReuseIdentifier: UsersListTableViewCell.cellIdentifier)
     }
@@ -56,6 +53,13 @@ class UsersListViewController: UIViewController, LoadingViewShowing, ErrorViewSh
             self?.navigationController?.pushViewController(viewController, animated: true)
         }
     }
+    
+    // MARK: - Properties
+    private let viewModel: UsersListViewModel
+    private var users: [User] = []
+    
+    // MARK: - Outlets
+    @IBOutlet weak private var usersListTableView: UITableView!
 }
 
 // MARK: - UITableViewDataSource

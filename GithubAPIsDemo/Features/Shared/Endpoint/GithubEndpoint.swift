@@ -1,5 +1,6 @@
 import Foundation
 
+// MARK: - GithubEndpoint
 enum GithubEndpoint {
     case getUsers
     case getUser(username: String)

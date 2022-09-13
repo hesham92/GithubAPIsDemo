@@ -10,11 +10,9 @@ protocol GithubServiceProtocol {
 
 // MARK: - GithubServiceProvider
 class GithubService: GithubServiceProtocol {
-    // MARK: - Private
-    private var api: HttpServiceProtocol
-    private var completionQueue: DispatchQueue
-    
     // MARK: - Public
+    
+    // MARK: - Initializer
     init(api: HttpServiceProtocol = HttpService(), completionQueue: DispatchQueue = .main) {
         self.api = api
         self.completionQueue = completionQueue
@@ -51,4 +49,8 @@ class GithubService: GithubServiceProtocol {
             }
         }
     }
+    
+    // MARK: - Private
+    private var api: HttpServiceProtocol
+    private var completionQueue: DispatchQueue
 }

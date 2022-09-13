@@ -14,12 +14,14 @@ protocol HttpServiceProtocol {
 
 // MARK: - HttpService
 class HttpService: HttpServiceProtocol {
-    private var session: URLSessionProtocol
+    // MARK: - Public
 
+    // MARK: - Initializer
     init(session: URLSessionProtocol = URLSession.shared) {
         self.session = session
     }
-
+    
+    // MARK: - HttpServiceProtocol
     func request<ModelType: Codable>(_ endpoint: Endpoint, modelType: ModelType.Type, responseData: @escaping (Result<ModelType, Error>) -> Void) {
         let request = endpoint.urlRequest()
         let task = session.dataTask(with: request) { data, _, error in
@@ -38,4 +40,7 @@ class HttpService: HttpServiceProtocol {
         }
         task.resume()
     }
+    
+    // MARK: - Private
+    private var session: URLSessionProtocol
 }

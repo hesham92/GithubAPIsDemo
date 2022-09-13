@@ -1,12 +1,7 @@
 import UIKit
 
 class ReposListViewController: UIViewController, LoadingViewShowing, ErrorViewShowing {
-    // MARK: - Outlets
-    @IBOutlet weak private var reposListTableView: UITableView!
-    
-    // MARK: - Properties
-    private let viewModel: ReposListViewModel
-    var repos: [Repo] = []
+    // MARK: - Public
     
     // MARK: - Initializers
     init(viewModel: ReposListViewModel) {
@@ -18,8 +13,8 @@ class ReposListViewController: UIViewController, LoadingViewShowing, ErrorViewSh
         assertionFailure("init(coder:) has not been implemented")
         return nil
     }
-    
-    // MARK: - LifeCycle
+        
+    // MARK: - Configuration
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -30,7 +25,6 @@ class ReposListViewController: UIViewController, LoadingViewShowing, ErrorViewSh
     static func makeViewController(username: String) -> ReposListViewController {
         let viewModel = ReposListViewModel(username: username)
         let viewController = ReposListViewController(viewModel: viewModel)
-        
         return viewController
     }
     
@@ -58,6 +52,13 @@ class ReposListViewController: UIViewController, LoadingViewShowing, ErrorViewSh
             self?.navigationController?.pushViewController(viewController, animated: true)
         }
     }
+    
+    // MARK: - Properties
+    private let viewModel: ReposListViewModel
+    private var repos: [Repo] = []
+    
+    // MARK: - Outlets
+    @IBOutlet weak private var reposListTableView: UITableView!
 }
 
 // MARK: - UITableViewDataSource

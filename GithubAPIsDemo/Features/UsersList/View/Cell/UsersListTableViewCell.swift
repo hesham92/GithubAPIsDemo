@@ -1,15 +1,13 @@
 import Kingfisher
 
-
 class UsersListTableViewCell: UITableViewCell {
-    // MARK: - Outlets
-    @IBOutlet weak var usernameLabel: UILabel!
-    @IBOutlet weak var userAvatarImageView: UIImageView!
-    @IBOutlet weak var numberOfFollowersLabel: UILabel!
-    @IBOutlet weak var numberOfPublicReposLabel: UILabel!
+    // MARK: - Public
+
+    // MARK: Constants
+    static let cellIdentifier: String = "UsersListTableViewCell"
+    static let cellNib: UINib = UINib(nibName: "UsersListTableViewCell", bundle: nil)
     
-    var viewModel: UsersListCellViewModel?
-    
+    // MARK: - Configuration
     func configure(user: User) {
         viewModel = UsersListCellViewModel(user: user)
         
@@ -29,7 +27,14 @@ class UsersListTableViewCell: UITableViewCell {
         numberOfPublicReposLabel.text = ""
     }
     
-    // MARK: Constants
-    static let cellIdentifier: String = "UsersListTableViewCell"
-    static let cellNib: UINib = UINib(nibName: "UsersListTableViewCell", bundle: nil)
+    // MARK: - Private
+
+    // MARK: - Properties
+    private var viewModel: UsersListCellViewModel?
+    
+    // MARK: - Outlets
+    @IBOutlet weak private var usernameLabel: UILabel!
+    @IBOutlet weak private var userAvatarImageView: UIImageView!
+    @IBOutlet weak private var numberOfFollowersLabel: UILabel!
+    @IBOutlet weak private var numberOfPublicReposLabel: UILabel!
 }
