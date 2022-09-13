@@ -1,6 +1,6 @@
 import Foundation
 
-struct Fork: Codable {
+struct Fork: Codable, Equatable {
     let owner: Owner
 }
 struct Owner: Codable {

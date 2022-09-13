@@ -32,12 +32,14 @@
                     </imageView>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="Vzh-GR-I3I" firstAttribute="top" relation="greaterThanOrEqual" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="1Ue-Lt-Dfp"/>
                     <constraint firstItem="Al4-gm-n5j" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="3mT-9d-mqF"/>
                     <constraint firstItem="Al4-gm-n5j" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="BRh-RY-A9W"/>
                     <constraint firstAttribute="trailing" secondItem="Al4-gm-n5j" secondAttribute="trailing" constant="16" id="Df5-yt-aVg"/>
                     <constraint firstItem="Al4-gm-n5j" firstAttribute="leading" secondItem="Vzh-GR-I3I" secondAttribute="trailing" constant="16" id="FdI-Hl-gtc"/>
                     <constraint firstItem="Vzh-GR-I3I" firstAttribute="centerY" secondItem="Al4-gm-n5j" secondAttribute="centerY" id="d39-Ym-4Tn"/>
                     <constraint firstItem="Vzh-GR-I3I" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="lhE-MP-n2W"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Vzh-GR-I3I" secondAttribute="bottom" constant="16" id="nMC-wl-o5E"/>
                     <constraint firstAttribute="bottom" secondItem="Al4-gm-n5j" secondAttribute="bottom" constant="16" id="viq-c9-O6w"/>
                 </constraints>
             </tableViewCellContentView>

@@ -44,6 +44,7 @@
 		C49F509128CBBFED00C5CEAC /* HttpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49F508F28CBBFED00C5CEAC /* HttpService.swift */; };
 		C49F509328CBC15400C5CEAC /* EndpointProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49F509228CBC15400C5CEAC /* EndpointProtocol.swift */; };
 		C4A3403828CE372A004BC3CC /* UsersListCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A3403728CE372A004BC3CC /* UsersListCellViewModel.swift */; };
+		C4C0215528D1349F0091277C /* GithubServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C0215428D1349F0091277C /* GithubServiceMock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +110,7 @@
 		C49F508F28CBBFED00C5CEAC /* HttpService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpService.swift; sourceTree = "<group>"; };
 		C49F509228CBC15400C5CEAC /* EndpointProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointProtocol.swift; sourceTree = "<group>"; };
 		C4A3403728CE372A004BC3CC /* UsersListCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListCellViewModel.swift; sourceTree = "<group>"; };
+		C4C0215428D1349F0091277C /* GithubServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubServiceMock.swift; sourceTree = "<group>"; };
 		E4CD03A15E693A505F95FF4B /* Pods-GithubAPIsDemo-GithubAPIsDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubAPIsDemo-GithubAPIsDemoUITests.release.xcconfig"; path = "Target Support Files/Pods-GithubAPIsDemo-GithubAPIsDemoUITests/Pods-GithubAPIsDemo-GithubAPIsDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
 		F52A382746AC6CEA9EDEC65A /* Pods-GithubAPIsDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubAPIsDemoTests.release.xcconfig"; path = "Target Support Files/Pods-GithubAPIsDemoTests/Pods-GithubAPIsDemoTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -218,12 +220,12 @@
 			path = Endpoints;
 			sourceTree = "<group>";
 		};
-		C418F81328CE6F1C00039C32 /* Models */ = {
+		C418F81328CE6F1C00039C32 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				C418F81428CE6F4300039C32 /* User.swift */,
 			);
-			path = Models;
+			path = Model;
 			sourceTree = "<group>";
 		};
 		C418F81628CE80EE00039C32 /* Extensions */ = {
@@ -291,7 +293,7 @@
 			children = (
 				C418F80A28CE5DAA00039C32 /* View */,
 				C418F80B28CE5DC600039C32 /* ViewModel */,
-				C418F81328CE6F1C00039C32 /* Models */,
+				C418F81328CE6F1C00039C32 /* Model */,
 			);
 			path = UsersList;
 			sourceTree = "<group>";
@@ -450,6 +452,7 @@
 			isa = PBXGroup;
 			children = (
 				C49F504328CB724200C5CEAC /* UsersListViewModelTests.swift */,
+				C4C0215428D1349F0091277C /* GithubServiceMock.swift */,
 			);
 			path = GithubAPIsDemoTests;
 			sourceTree = "<group>";
@@ -756,6 +759,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4C0215528D1349F0091277C /* GithubServiceMock.swift in Sources */,
 				C49F504428CB724200C5CEAC /* UsersListViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -922,6 +926,7 @@
 				INFOPLIST_FILE = GithubAPIsDemo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -934,7 +939,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -950,6 +955,7 @@
 				INFOPLIST_FILE = GithubAPIsDemo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -962,7 +968,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
