@@ -36,8 +36,6 @@
 		C49F503628CB724200C5CEAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C49F503528CB724200C5CEAC /* Assets.xcassets */; };
 		C49F503928CB724200C5CEAC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C49F503728CB724200C5CEAC /* LaunchScreen.storyboard */; };
 		C49F504428CB724200C5CEAC /* UsersListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49F504328CB724200C5CEAC /* UsersListViewModelTests.swift */; };
-		C49F504E28CB724200C5CEAC /* GithubAPIsDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49F504D28CB724200C5CEAC /* GithubAPIsDemoUITests.swift */; };
-		C49F505028CB724200C5CEAC /* GithubAPIsDemoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49F504F28CB724200C5CEAC /* GithubAPIsDemoUITestsLaunchTests.swift */; };
 		C49F508B28CB93C200C5CEAC /* UsersListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49F508928CB93C200C5CEAC /* UsersListViewController.swift */; };
 		C49F508C28CB93C200C5CEAC /* UsersListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C49F508A28CB93C200C5CEAC /* UsersListViewController.xib */; };
 		C49F509028CBBFED00C5CEAC /* GithubEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49F508E28CBBFED00C5CEAC /* GithubEndpoint.swift */; };
@@ -45,6 +43,10 @@
 		C49F509328CBC15400C5CEAC /* EndpointProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49F509228CBC15400C5CEAC /* EndpointProtocol.swift */; };
 		C4A3403828CE372A004BC3CC /* UsersListCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A3403728CE372A004BC3CC /* UsersListCellViewModel.swift */; };
 		C4C0215528D1349F0091277C /* GithubServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C0215428D1349F0091277C /* GithubServiceMock.swift */; };
+		C4C0215728D142AB0091277C /* User+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C0215628D142AB0091277C /* User+Mock.swift */; };
+		C4C0215B28D1443D0091277C /* GithubAPIsDemoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C0215928D1443D0091277C /* GithubAPIsDemoUITestsLaunchTests.swift */; };
+		C4C0215C28D1443D0091277C /* GithubAPIsDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C0215A28D1443D0091277C /* GithubAPIsDemoUITests.swift */; };
+		C4C0215F28D146BA0091277C /* MockError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C0215E28D146BA0091277C /* MockError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,8 +104,6 @@
 		C49F503F28CB724200C5CEAC /* GithubAPIsDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GithubAPIsDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C49F504328CB724200C5CEAC /* UsersListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListViewModelTests.swift; sourceTree = "<group>"; };
 		C49F504928CB724200C5CEAC /* GithubAPIsDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GithubAPIsDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C49F504D28CB724200C5CEAC /* GithubAPIsDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubAPIsDemoUITests.swift; sourceTree = "<group>"; };
-		C49F504F28CB724200C5CEAC /* GithubAPIsDemoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubAPIsDemoUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		C49F508928CB93C200C5CEAC /* UsersListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListViewController.swift; sourceTree = "<group>"; };
 		C49F508A28CB93C200C5CEAC /* UsersListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UsersListViewController.xib; sourceTree = "<group>"; };
 		C49F508E28CBBFED00C5CEAC /* GithubEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubEndpoint.swift; sourceTree = "<group>"; };
@@ -111,6 +111,10 @@
 		C49F509228CBC15400C5CEAC /* EndpointProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointProtocol.swift; sourceTree = "<group>"; };
 		C4A3403728CE372A004BC3CC /* UsersListCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListCellViewModel.swift; sourceTree = "<group>"; };
 		C4C0215428D1349F0091277C /* GithubServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubServiceMock.swift; sourceTree = "<group>"; };
+		C4C0215628D142AB0091277C /* User+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+Mock.swift"; sourceTree = "<group>"; };
+		C4C0215928D1443D0091277C /* GithubAPIsDemoUITestsLaunchTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubAPIsDemoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C4C0215A28D1443D0091277C /* GithubAPIsDemoUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubAPIsDemoUITests.swift; sourceTree = "<group>"; };
+		C4C0215E28D146BA0091277C /* MockError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockError.swift; sourceTree = "<group>"; };
 		E4CD03A15E693A505F95FF4B /* Pods-GithubAPIsDemo-GithubAPIsDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubAPIsDemo-GithubAPIsDemoUITests.release.xcconfig"; path = "Target Support Files/Pods-GithubAPIsDemo-GithubAPIsDemoUITests/Pods-GithubAPIsDemo-GithubAPIsDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
 		F52A382746AC6CEA9EDEC65A /* Pods-GithubAPIsDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubAPIsDemoTests.release.xcconfig"; path = "Target Support Files/Pods-GithubAPIsDemoTests/Pods-GithubAPIsDemoTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -416,7 +420,7 @@
 			children = (
 				C49F502B28CB724000C5CEAC /* GithubAPIsDemo */,
 				C49F504228CB724200C5CEAC /* GithubAPIsDemoTests */,
-				C49F504C28CB724200C5CEAC /* GithubAPIsDemoUITests */,
+				C4C0215828D144250091277C /* GithubAPIsDemoUITests */,
 				C49F502A28CB724000C5CEAC /* Products */,
 				1C15BBC0F084E87FE67FC417 /* Pods */,
 				CF7109DFAC0328A7C005CE5A /* Frameworks */,
@@ -451,19 +455,12 @@
 		C49F504228CB724200C5CEAC /* GithubAPIsDemoTests */ = {
 			isa = PBXGroup;
 			children = (
-				C49F504328CB724200C5CEAC /* UsersListViewModelTests.swift */,
 				C4C0215428D1349F0091277C /* GithubServiceMock.swift */,
+				C4C0215628D142AB0091277C /* User+Mock.swift */,
+				C49F504328CB724200C5CEAC /* UsersListViewModelTests.swift */,
+				C4C0215E28D146BA0091277C /* MockError.swift */,
 			);
 			path = GithubAPIsDemoTests;
-			sourceTree = "<group>";
-		};
-		C49F504C28CB724200C5CEAC /* GithubAPIsDemoUITests */ = {
-			isa = PBXGroup;
-			children = (
-				C49F504D28CB724200C5CEAC /* GithubAPIsDemoUITests.swift */,
-				C49F504F28CB724200C5CEAC /* GithubAPIsDemoUITestsLaunchTests.swift */,
-			);
-			path = GithubAPIsDemoUITests;
 			sourceTree = "<group>";
 		};
 		C49F508D28CBBFED00C5CEAC /* Network */ = {
@@ -473,6 +470,15 @@
 				C418F81128CE5F2900039C32 /* Endpoints */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		C4C0215828D144250091277C /* GithubAPIsDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C4C0215A28D1443D0091277C /* GithubAPIsDemoUITests.swift */,
+				C4C0215928D1443D0091277C /* GithubAPIsDemoUITestsLaunchTests.swift */,
+			);
+			path = GithubAPIsDemoUITests;
 			sourceTree = "<group>";
 		};
 		CF7109DFAC0328A7C005CE5A /* Frameworks */ = {
@@ -565,6 +571,7 @@
 					};
 					C49F504828CB724200C5CEAC = {
 						CreatedOnToolsVersion = 13.3.1;
+						LastSwiftMigration = 1330;
 						TestTargetID = C49F502828CB724000C5CEAC;
 					};
 				};
@@ -759,8 +766,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4C0215728D142AB0091277C /* User+Mock.swift in Sources */,
 				C4C0215528D1349F0091277C /* GithubServiceMock.swift in Sources */,
 				C49F504428CB724200C5CEAC /* UsersListViewModelTests.swift in Sources */,
+				C4C0215F28D146BA0091277C /* MockError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -768,8 +777,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C49F504E28CB724200C5CEAC /* GithubAPIsDemoUITests.swift in Sources */,
-				C49F505028CB724200C5CEAC /* GithubAPIsDemoUITestsLaunchTests.swift in Sources */,
+				C4C0215C28D1443D0091277C /* GithubAPIsDemoUITests.swift in Sources */,
+				C4C0215B28D1443D0091277C /* GithubAPIsDemoUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1017,13 +1026,20 @@
 			baseConfigurationReference = A908C33A94F551512F4561F5 /* Pods-GithubAPIsDemo-GithubAPIsDemoUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = hesham.GithubAPIsDemoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = GithubAPIsDemo;
@@ -1035,9 +1051,15 @@
 			baseConfigurationReference = E4CD03A15E693A505F95FF4B /* Pods-GithubAPIsDemo-GithubAPIsDemoUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = hesham.GithubAPIsDemoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
