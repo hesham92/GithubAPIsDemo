@@ -3,6 +3,8 @@ import Foundation
 enum GithubEndpoint {
     case getUsers
     case getUser(username: String)
+    case getUserRepos(username: String)
+    case getRepoForks(username: String, repoName: String)
 }
 
 extension GithubEndpoint: Endpoint {
@@ -14,12 +16,16 @@ extension GithubEndpoint: Endpoint {
             return "users"
         case let .getUser(username):
             return "users/\(username)"
+        case let .getUserRepos(username):
+            return "users/\(username)repos/"
+        case let .getRepoForks(username, repoName):
+            return "repos/\(username)/\(repoName)/forks"
         }
     }
     
     var method: HttpMethod {
         switch self {
-        case .getUsers, .getUser:
+        case .getUsers, .getUser, .getUserRepos,.getRepoForks:
             return .get
         }
     }
