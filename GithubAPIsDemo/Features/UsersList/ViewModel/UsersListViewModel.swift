@@ -1,22 +1,28 @@
 import Foundation
 
 class UsersListViewModel {
+    // MARK: - Public
+
     // MARK: - Observerables
     var users: Observerable<[User]> = Observerable([])
     var errorMessage: Observerable<String> = Observerable("")
     var isLoading: Observerable<Bool> = Observerable(true)
     var naviagteToReposScreen: Observerable<String> = Observerable("")
     
-    // MARK: - Properties
-    private let service: GithubServiceProtocol
-
     // MARK: - Initializer
     init(service: GithubServiceProtocol = GithubService()){
         self.service = service
         self.fetchData()
     }
     
-    // MARK: - Helpers
+    // MARK: - View Actions
+    func didSelectUsersAtIndex(index: Int) {
+        naviagteToReposScreen.value = users.value[index].username
+    }
+    
+    // MARK: - Private
+    
+    // MARK: - GithubServiceProtocol
     private func fetchData() {
         service.fetchUsers(completion: { [weak self] (result) in
             guard let self = self else { return }
@@ -31,7 +37,6 @@ class UsersListViewModel {
         })
     }
     
-    func didSelectUsersAtIndex(index: Int) {
-        naviagteToReposScreen.value = users.value[index].username
-    }
+    // MARK: - Properties
+    private let service: GithubServiceProtocol
 }

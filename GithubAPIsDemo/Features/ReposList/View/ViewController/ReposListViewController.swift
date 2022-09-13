@@ -29,6 +29,8 @@ class ReposListViewController: UIViewController, LoadingViewShowing, ErrorViewSh
     }
     
     // MARK: - Private
+    
+    // MARK: - Configuration
     private func setupView() {
         reposListTableView.register(ReposListTableViewCell.cellNib, forCellReuseIdentifier: ReposListTableViewCell.cellIdentifier)
     }

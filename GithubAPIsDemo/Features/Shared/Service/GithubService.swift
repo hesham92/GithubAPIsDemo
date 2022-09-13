@@ -1,6 +1,6 @@
 import Foundation
 
-// MARK: - GithubServiceProviderProtocol
+// MARK: - GithubServiceProtocol
 protocol GithubServiceProtocol {
     func fetchUsers(completion: @escaping (Result<[User], Error>) -> ())
     func fetchUser(username: String, completion: @escaping (Result<User, Error>) -> ())
@@ -8,7 +8,6 @@ protocol GithubServiceProtocol {
     func fetchRepoForks(repoInfo: RepoInfo, completion: @escaping (Result<[Fork], Error>) -> ())
 }
 
-// MARK: - GithubServiceProvider
 class GithubService: GithubServiceProtocol {
     // MARK: - Public
     
@@ -51,6 +50,8 @@ class GithubService: GithubServiceProtocol {
     }
     
     // MARK: - Private
+    
+    // MARK: - Properties
     private var api: HttpServiceProtocol
     private var completionQueue: DispatchQueue
 }

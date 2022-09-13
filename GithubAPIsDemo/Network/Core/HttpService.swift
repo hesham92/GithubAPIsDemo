@@ -42,5 +42,7 @@ class HttpService: HttpServiceProtocol {
     }
     
     // MARK: - Private
+    
+    // MARK: - Properties
     private var session: URLSessionProtocol
 }

@@ -7,13 +7,14 @@ class RepoForksListTableViewCell: UITableViewCell {
     static let cellIdentifier: String = "RepoForksListTableViewCell"
     static let cellNib: UINib = UINib(nibName: "RepoForksListTableViewCell", bundle: nil)
     
+    
+    // MARK: - Configuration
     func configure(fork: Fork) {
         ownerUsernameLabel.text = fork.owner.username
         ownerAvatarImageView.kf.indicatorType = .activity
         ownerAvatarImageView.kf.setImage(with: URL(string: fork.owner.avatarUrl))
     }
     
-    // MARK: - LifeCycle
     override func prepareForReuse() {
         ownerUsernameLabel.text = ""
         ownerAvatarImageView.image = nil

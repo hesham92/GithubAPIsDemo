@@ -1,12 +1,13 @@
 import Kingfisher
 
 class ReposListTableViewCell: UITableViewCell {
-    // MARK: - Outlets
-    @IBOutlet weak var usernameLabel: UILabel!
-    @IBOutlet weak var descriptionLabel: UILabel!
-    @IBOutlet weak var licenseLabel: UILabel!
-
+    // MARK: - Public
     
+    // MARK: Constants
+    static let cellIdentifier: String = "ReposListTableViewCell"
+    static let cellNib: UINib = UINib(nibName: "ReposListTableViewCell", bundle: nil)
+    
+    // MARK: - Configuration
     func configure(repo: Repo) {
         self.usernameLabel.text = repo.name
         self.descriptionLabel.text = repo.description
@@ -19,7 +20,10 @@ class ReposListTableViewCell: UITableViewCell {
         licenseLabel.text = ""
     }
     
-    // MARK: Constants
-    static let cellIdentifier: String = "ReposListTableViewCell"
-    static let cellNib: UINib = UINib(nibName: "ReposListTableViewCell", bundle: nil)
+    // MARK: - Private
+
+    // MARK: - Outlets
+    @IBOutlet weak private var usernameLabel: UILabel!
+    @IBOutlet weak private var descriptionLabel: UILabel!
+    @IBOutlet weak private var licenseLabel: UILabel!
 }

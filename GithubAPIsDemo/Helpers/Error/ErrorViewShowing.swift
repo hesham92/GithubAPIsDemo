@@ -1,5 +1,6 @@
 import UIKit
 
+// MARK: - ErrorViewShowing
 protocol ErrorViewShowing {
     func showErrorMessage(_ errorMessage: String)
 }

@@ -1,5 +1,6 @@
 import UIKit
 
+// MARK: - LoadingViewShowing
 protocol LoadingViewShowing {
     func handleLoading(isLoading: Bool)
 }

@@ -11,7 +11,7 @@
 		5D6EFB57C7118C8D136BAB5A /* Pods_GithubAPIsDemo_GithubAPIsDemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DD3D0B242CEB0F8D0B20CCB /* Pods_GithubAPIsDemo_GithubAPIsDemoUITests.framework */; };
 		8180E6E103D8ACD36DE4FFF0 /* Pods_GithubAPIsDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77064AFD711816A33AEEBA6E /* Pods_GithubAPIsDemo.framework */; };
 		C418F81528CE6F4300039C32 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C418F81428CE6F4300039C32 /* User.swift */; };
-		C418F81828CE811700039C32 /* String+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C418F81728CE811700039C32 /* String+ext.swift */; };
+		C418F81828CE811700039C32 /* String+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C418F81728CE811700039C32 /* String+extension.swift */; };
 		C42F710428CCC66700F96242 /* LoadViewShowing.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42F710028CCC66700F96242 /* LoadViewShowing.swift */; };
 		C42F710628CCC66700F96242 /* ErrorViewShowing.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42F710328CCC66700F96242 /* ErrorViewShowing.swift */; };
 		C42F710928CCC6FE00F96242 /* UsersListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42F710828CCC6FE00F96242 /* UsersListViewModel.swift */; };
@@ -72,7 +72,7 @@
 		9E80BCFC2726BF3EBAA9EADC /* Pods-GithubAPIsDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubAPIsDemoTests.debug.xcconfig"; path = "Target Support Files/Pods-GithubAPIsDemoTests/Pods-GithubAPIsDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A908C33A94F551512F4561F5 /* Pods-GithubAPIsDemo-GithubAPIsDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubAPIsDemo-GithubAPIsDemoUITests.debug.xcconfig"; path = "Target Support Files/Pods-GithubAPIsDemo-GithubAPIsDemoUITests/Pods-GithubAPIsDemo-GithubAPIsDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C418F81428CE6F4300039C32 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		C418F81728CE811700039C32 /* String+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+ext.swift"; sourceTree = "<group>"; };
+		C418F81728CE811700039C32 /* String+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+extension.swift"; sourceTree = "<group>"; };
 		C42F710028CCC66700F96242 /* LoadViewShowing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadViewShowing.swift; sourceTree = "<group>"; };
 		C42F710328CCC66700F96242 /* ErrorViewShowing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorViewShowing.swift; sourceTree = "<group>"; };
 		C42F710828CCC6FE00F96242 /* UsersListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersListViewModel.swift; sourceTree = "<group>"; };
@@ -229,7 +229,7 @@
 		C418F81628CE80EE00039C32 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				C418F81728CE811700039C32 /* String+ext.swift */,
+				C418F81728CE811700039C32 /* String+extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -747,7 +747,7 @@
 				C49F509328CBC15400C5CEAC /* EndpointProtocol.swift in Sources */,
 				C43D50CE28D00C220084D7C5 /* ReposListViewModel.swift in Sources */,
 				C42F710928CCC6FE00F96242 /* UsersListViewModel.swift in Sources */,
-				C418F81828CE811700039C32 /* String+ext.swift in Sources */,
+				C418F81828CE811700039C32 /* String+extension.swift in Sources */,
 				C42F710D28CCC8A900F96242 /* UsersListTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
