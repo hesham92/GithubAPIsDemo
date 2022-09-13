@@ -20,6 +20,7 @@ class ReposListViewController: UIViewController, LoadingViewShowing, ErrorViewSh
         
         setupView()
         setupBindings()
+        viewModel.viewDidLoad()
     }
     
     static func makeViewController(username: String) -> ReposListViewController {

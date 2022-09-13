@@ -2,7 +2,7 @@ import Foundation
 
 class UsersListViewModel {
     // MARK: - Public
-
+    
     // MARK: - Observerables
     var users: Observerable<[User]> = Observerable([])
     var errorMessage: Observerable<String> = Observerable("")
@@ -12,12 +12,15 @@ class UsersListViewModel {
     // MARK: - Initializer
     init(service: GithubServiceProtocol = GithubService()){
         self.service = service
-        self.fetchData()
     }
     
     // MARK: - View Actions
     func didSelectUsersAtIndex(index: Int) {
         naviagteToReposScreen.value = users.value[index].username
+    }
+    
+    func viewDidLoad() {
+        fetchData()
     }
     
     // MARK: - Private

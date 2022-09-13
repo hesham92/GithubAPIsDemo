@@ -20,6 +20,7 @@ class RepoForksListViewController: UIViewController, LoadingViewShowing, ErrorVi
         
         setupView()
         setupBindings()
+        viewModel.viewDidLoad()
     }
     
     static func makeViewController(repoInfo: RepoInfo) -> RepoForksListViewController {

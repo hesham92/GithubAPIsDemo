@@ -9,18 +9,22 @@ class RepoForksListViewModel {
     var forks: Observerable<[Fork]> = Observerable([])
     var errorMessage: Observerable<String> = Observerable("")
     var isLoading: Observerable<Bool> = Observerable(true)
-  
+    
     // MARK: - Initializer
     init(service: GithubServiceProtocol = GithubService(), repoInfo: RepoInfo){
         self.service = service
         self.repoInfo = repoInfo
-        self.fetchRepoForks(repoInfo: repoInfo)
+    }
+    
+    // MARK: - View Actions
+    func viewDidLoad() {
+        fetchData(repoInfo: repoInfo)
     }
     
     // MARK: - Priavte
     
     // MARK: - GithubServiceProtocol
-    private func fetchRepoForks(repoInfo: RepoInfo) {
+    private func fetchData(repoInfo: RepoInfo) {
         service.fetchRepoForks(repoInfo: repoInfo,  completion: { [weak self] (result) in
             guard let self = self else { return }
             self.isLoading.value = false

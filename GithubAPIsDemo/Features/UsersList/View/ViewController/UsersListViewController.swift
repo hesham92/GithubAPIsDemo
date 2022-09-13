@@ -19,6 +19,7 @@ class UsersListViewController: UIViewController, LoadingViewShowing, ErrorViewSh
         
         setupView()
         setupBindings()
+        viewModel.viewDidLoad()
     }
     
     static func makeViewController() -> UsersListViewController {

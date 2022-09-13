@@ -2,7 +2,7 @@ import Foundation
 
 class ReposListViewModel {
     // MARK: - Public
-
+    
     // MARK: - Observerables
     var repos: Observerable<[Repo]> = Observerable([])
     var errorMessage: Observerable<String> = Observerable("")
@@ -13,7 +13,6 @@ class ReposListViewModel {
     init(service: GithubServiceProtocol = GithubService(), username: String){
         self.service = service
         self.username = username
-        self.fetchUserRepos(username: username)
     }
     
     // MARK: - View Actions
@@ -22,10 +21,14 @@ class ReposListViewModel {
         naviagteToRepoForksScreen.value = (username, repoName)
     }
     
+    func viewDidLoad() {
+        self.fetchData(username: username)
+    }
+    
     // MARK: - Private
     
     // MARK: - GithubServiceProtocol
-    private func fetchUserRepos(username: String) {
+    private func fetchData(username: String) {
         service.fetchUserRepos(username: username, completion: { [weak self] (result) in
             guard let self = self else { return }
             self.isLoading.value = false
