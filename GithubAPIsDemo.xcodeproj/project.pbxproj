@@ -415,6 +415,24 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		C442B92528D14F3200E0C4AF /* SharedMocks */ = {
+			isa = PBXGroup;
+			children = (
+				C4C0215628D142AB0091277C /* User+Mock.swift */,
+				C4C0215E28D146BA0091277C /* MockError.swift */,
+				C4C0215428D1349F0091277C /* GithubServiceMock.swift */,
+			);
+			path = SharedMocks;
+			sourceTree = "<group>";
+		};
+		C442B92628D14F4600E0C4AF /* UsersListViewModelTests */ = {
+			isa = PBXGroup;
+			children = (
+				C49F504328CB724200C5CEAC /* UsersListViewModelTests.swift */,
+			);
+			path = UsersListViewModelTests;
+			sourceTree = "<group>";
+		};
 		C49F502028CB724000C5CEAC = {
 			isa = PBXGroup;
 			children = (
@@ -455,10 +473,8 @@
 		C49F504228CB724200C5CEAC /* GithubAPIsDemoTests */ = {
 			isa = PBXGroup;
 			children = (
-				C4C0215428D1349F0091277C /* GithubServiceMock.swift */,
-				C4C0215628D142AB0091277C /* User+Mock.swift */,
-				C49F504328CB724200C5CEAC /* UsersListViewModelTests.swift */,
-				C4C0215E28D146BA0091277C /* MockError.swift */,
+				C442B92528D14F3200E0C4AF /* SharedMocks */,
+				C442B92628D14F4600E0C4AF /* UsersListViewModelTests */,
 			);
 			path = GithubAPIsDemoTests;
 			sourceTree = "<group>";
