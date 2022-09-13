@@ -22,13 +22,13 @@ class ReposListViewModel {
     }
     
     func viewDidLoad() {
-        self.fetchData(username: username)
+        self.fetchUserRepos(username: username)
     }
     
     // MARK: - Private
     
     // MARK: - GithubServiceProtocol
-    private func fetchData(username: String) {
+    private func fetchUserRepos(username: String) {
         service.fetchUserRepos(username: username, completion: { [weak self] (result) in
             guard let self = self else { return }
             self.isLoading.value = false

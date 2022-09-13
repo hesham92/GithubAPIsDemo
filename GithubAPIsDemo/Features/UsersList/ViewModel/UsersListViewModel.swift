@@ -20,13 +20,13 @@ class UsersListViewModel {
     }
     
     func viewDidLoad() {
-        fetchData()
+        fetchUsers()
     }
     
     // MARK: - Private
     
     // MARK: - GithubServiceProtocol
-    private func fetchData() {
+    private func fetchUsers() {
         service.fetchUsers(completion: { [weak self] (result) in
             guard let self = self else { return }
             self.isLoading.value = false

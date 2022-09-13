@@ -18,13 +18,13 @@ class RepoForksListViewModel {
     
     // MARK: - View Actions
     func viewDidLoad() {
-        fetchData(repoInfo: repoInfo)
+        fetchRepoForks(repoInfo: repoInfo)
     }
     
     // MARK: - Priavte
     
     // MARK: - GithubServiceProtocol
-    private func fetchData(repoInfo: RepoInfo) {
+    private func fetchRepoForks(repoInfo: RepoInfo) {
         service.fetchRepoForks(repoInfo: repoInfo,  completion: { [weak self] (result) in
             guard let self = self else { return }
             self.isLoading.value = false
