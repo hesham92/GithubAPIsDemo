@@ -21,6 +21,12 @@
 		C42F711528CD259100F96242 /* Observerable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42F711428CD259100F96242 /* Observerable.swift */; };
 		C42F711928CD6E8800F96242 /* ReposListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42F711728CD6E8800F96242 /* ReposListViewController.swift */; };
 		C42F711A28CD6E8800F96242 /* ReposListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C42F711828CD6E8800F96242 /* ReposListViewController.xib */; };
+		C433ED6128D0B33F00B4F0E5 /* RepoForksListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C433ED5928D0B33F00B4F0E5 /* RepoForksListViewController.xib */; };
+		C433ED6228D0B33F00B4F0E5 /* RepoForksListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C433ED5A28D0B33F00B4F0E5 /* RepoForksListViewController.swift */; };
+		C433ED6328D0B33F00B4F0E5 /* RepoForksListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C433ED5C28D0B33F00B4F0E5 /* RepoForksListViewModel.swift */; };
+		C433ED6428D0B33F00B4F0E5 /* RepoForksListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C433ED5F28D0B33F00B4F0E5 /* RepoForksListTableViewCell.xib */; };
+		C433ED6528D0B33F00B4F0E5 /* RepoForksListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C433ED6028D0B33F00B4F0E5 /* RepoForksListTableViewCell.swift */; };
+		C433ED6728D0D19600B4F0E5 /* Fork.swift in Sources */ = {isa = PBXBuildFile; fileRef = C433ED6628D0D19600B4F0E5 /* Fork.swift */; };
 		C43D50C228D005750084D7C5 /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43D50C128D005750084D7C5 /* Repo.swift */; };
 		C43D50CA28D009900084D7C5 /* ReposListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43D50C728D009900084D7C5 /* ReposListTableViewCell.swift */; };
 		C43D50CB28D009900084D7C5 /* ReposListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C43D50C828D009900084D7C5 /* ReposListTableViewCell.xib */; };
@@ -76,6 +82,12 @@
 		C42F711428CD259100F96242 /* Observerable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observerable.swift; sourceTree = "<group>"; };
 		C42F711728CD6E8800F96242 /* ReposListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposListViewController.swift; sourceTree = "<group>"; };
 		C42F711828CD6E8800F96242 /* ReposListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReposListViewController.xib; sourceTree = "<group>"; };
+		C433ED5928D0B33F00B4F0E5 /* RepoForksListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RepoForksListViewController.xib; sourceTree = "<group>"; };
+		C433ED5A28D0B33F00B4F0E5 /* RepoForksListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoForksListViewController.swift; sourceTree = "<group>"; };
+		C433ED5C28D0B33F00B4F0E5 /* RepoForksListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoForksListViewModel.swift; sourceTree = "<group>"; };
+		C433ED5F28D0B33F00B4F0E5 /* RepoForksListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RepoForksListTableViewCell.xib; sourceTree = "<group>"; };
+		C433ED6028D0B33F00B4F0E5 /* RepoForksListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoForksListTableViewCell.swift; sourceTree = "<group>"; };
+		C433ED6628D0D19600B4F0E5 /* Fork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fork.swift; sourceTree = "<group>"; };
 		C43D50C128D005750084D7C5 /* Repo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
 		C43D50C728D009900084D7C5 /* ReposListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReposListTableViewCell.swift; sourceTree = "<group>"; };
 		C43D50C828D009900084D7C5 /* ReposListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReposListTableViewCell.xib; sourceTree = "<group>"; };
@@ -174,6 +186,7 @@
 				C418F81328CE6F1C00039C32 /* Models */,
 				C42F711228CD187400F96242 /* UsersList */,
 				C418F80D28CE5E6600039C32 /* Repos */,
+				C433ED5728D0B23600B4F0E5 /* RepoForks */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -219,6 +232,7 @@
 			children = (
 				C418F81428CE6F4300039C32 /* User.swift */,
 				C43D50C128D005750084D7C5 /* Repo.swift */,
+				C433ED6628D0D19600B4F0E5 /* Fork.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -317,20 +331,56 @@
 			path = Observerable;
 			sourceTree = "<group>";
 		};
-		C43D50C328D008A20084D7C5 /* Cell */ = {
+		C433ED5728D0B23600B4F0E5 /* RepoForks */ = {
 			isa = PBXGroup;
 			children = (
-				C43D50C628D009900084D7C5 /* View */,
-				C43D50C428D009900084D7C5 /* ViewModel */,
+				C433ED5D28D0B33F00B4F0E5 /* Cell */,
+				C433ED5828D0B33F00B4F0E5 /* View */,
+				C433ED5B28D0B33F00B4F0E5 /* ViewModel */,
+			);
+			path = RepoForks;
+			sourceTree = "<group>";
+		};
+		C433ED5828D0B33F00B4F0E5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C433ED5928D0B33F00B4F0E5 /* RepoForksListViewController.xib */,
+				C433ED5A28D0B33F00B4F0E5 /* RepoForksListViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C433ED5B28D0B33F00B4F0E5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C433ED5C28D0B33F00B4F0E5 /* RepoForksListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C433ED5D28D0B33F00B4F0E5 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				C433ED5E28D0B33F00B4F0E5 /* View */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
 		};
-		C43D50C428D009900084D7C5 /* ViewModel */ = {
+		C433ED5E28D0B33F00B4F0E5 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C433ED5F28D0B33F00B4F0E5 /* RepoForksListTableViewCell.xib */,
+				C433ED6028D0B33F00B4F0E5 /* RepoForksListTableViewCell.swift */,
 			);
-			path = ViewModel;
+			path = View;
+			sourceTree = "<group>";
+		};
+		C43D50C328D008A20084D7C5 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				C43D50C628D009900084D7C5 /* View */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		C43D50C628D009900084D7C5 /* View */ = {
@@ -534,8 +584,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C42F710E28CCC8A900F96242 /* UsersListTableViewCell.xib in Resources */,
+				C433ED6428D0B33F00B4F0E5 /* RepoForksListTableViewCell.xib in Resources */,
 				C49F503928CB724200C5CEAC /* LaunchScreen.storyboard in Resources */,
 				C49F508C28CB93C200C5CEAC /* UsersListViewController.xib in Resources */,
+				C433ED6128D0B33F00B4F0E5 /* RepoForksListViewController.xib in Resources */,
 				C43D50CB28D009900084D7C5 /* ReposListTableViewCell.xib in Resources */,
 				C49F503628CB724200C5CEAC /* Assets.xcassets in Resources */,
 				C42F711A28CD6E8800F96242 /* ReposListViewController.xib in Resources */,
@@ -666,13 +718,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C433ED6228D0B33F00B4F0E5 /* RepoForksListViewController.swift in Sources */,
 				C43D50CA28D009900084D7C5 /* ReposListTableViewCell.swift in Sources */,
 				C49F509028CBBFED00C5CEAC /* GithubEndpoint.swift in Sources */,
 				C4A3403828CE372A004BC3CC /* UsersListCellViewModel.swift in Sources */,
 				C42F711528CD259100F96242 /* Observerable.swift in Sources */,
 				C42F710428CCC66700F96242 /* LoadViewShowing.swift in Sources */,
+				C433ED6528D0B33F00B4F0E5 /* RepoForksListTableViewCell.swift in Sources */,
 				C42F711928CD6E8800F96242 /* ReposListViewController.swift in Sources */,
 				C49F509128CBBFED00C5CEAC /* HttpService.swift in Sources */,
+				C433ED6728D0D19600B4F0E5 /* Fork.swift in Sources */,
+				C433ED6328D0B33F00B4F0E5 /* RepoForksListViewModel.swift in Sources */,
 				C49F502D28CB724000C5CEAC /* AppDelegate.swift in Sources */,
 				C49F508B28CB93C200C5CEAC /* UsersListViewController.swift in Sources */,
 				C43D50C228D005750084D7C5 /* Repo.swift in Sources */,

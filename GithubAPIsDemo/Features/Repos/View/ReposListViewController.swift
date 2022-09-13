@@ -53,6 +53,10 @@ class ReposListViewController: UIViewController, LoadingViewShowing, ErrorViewSh
             self?.handleLoading(isLoading: isLoading)
         }
         
+        viewModel.naviagteToRepoForksScreen.bind { [weak self] repoInfo in
+            let viewController = RepoForksListViewController.makeViewController(repoInfo: repoInfo)
+            self?.navigationController?.pushViewController(viewController, animated: true)
+        }
     }
 }
 
@@ -63,7 +67,8 @@ extension ReposListViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: ReposListTableViewCell.cellIdentifier, for: indexPath) as! ReposListTableViewCell
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: ReposListTableViewCell.cellIdentifier, for: indexPath) as? ReposListTableViewCell else { return UITableViewCell() }
+        
         cell.configure(repo: repos[indexPath.row])
         
         return cell

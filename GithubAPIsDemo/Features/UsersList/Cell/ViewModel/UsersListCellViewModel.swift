@@ -1,12 +1,11 @@
 import Foundation
 
 class UsersListCellViewModel {
+    // MARK: - Public
+    
     // MARK: - Observerables
     var user: Observerable<User>
     
-    // MARK: - Properties
-    private let service: GithubServiceProtocol
-
     // MARK: - Initializer
     init(service: GithubServiceProtocol = GithubService(), user: User){
         self.service = service
@@ -15,7 +14,9 @@ class UsersListCellViewModel {
         fetchData()
     }
     
-    // MARK: - Helpers
+    // MARK: - Private
+
+    // MARK: - GithubServiceProtocol
     private func fetchData() {
         service.fetchUser(username: user.value.username, completion: { [weak self] (result) in
             guard let self = self else { return }
@@ -27,4 +28,7 @@ class UsersListCellViewModel {
             }
         })
     }
+    
+    // MARK: - Properties
+    private let service: GithubServiceProtocol
 }

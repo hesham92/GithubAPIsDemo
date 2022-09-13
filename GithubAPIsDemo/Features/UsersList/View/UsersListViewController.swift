@@ -65,7 +65,8 @@ extension UsersListViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: UsersListTableViewCell.cellIdentifier, for: indexPath) as! UsersListTableViewCell
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: UsersListTableViewCell.cellIdentifier, for: indexPath) as? UsersListTableViewCell else { return UITableViewCell() }
+        
         cell.configure(user: users[indexPath.row])
         
         return cell
