@@ -154,20 +154,11 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		C418F80928CE5D3800039C32 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				C42F710B28CCC8A900F96242 /* UsersListTableViewCell.swift */,
-				C42F710C28CCC8A900F96242 /* UsersListTableViewCell.xib */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		C418F80A28CE5DAA00039C32 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				C49F508A28CB93C200C5CEAC /* UsersListViewController.xib */,
-				C49F508928CB93C200C5CEAC /* UsersListViewController.swift */,
+				C433ED6A28D0D6F300B4F0E5 /* ViewController */,
+				C42F710A28CCC8A900F96242 /* Cell */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -175,6 +166,7 @@
 		C418F80B28CE5DC600039C32 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				C4A3403728CE372A004BC3CC /* UsersListCellViewModel.swift */,
 				C42F710828CCC6FE00F96242 /* UsersListViewModel.swift */,
 			);
 			path = ViewModel;
@@ -183,29 +175,30 @@
 		C418F80C28CE5E4C00039C32 /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				C418F81328CE6F1C00039C32 /* Models */,
+				C418F81928CE835600039C32 /* GithubEndpoint */,
+				C42F710F28CCCA4D00F96242 /* Services */,
+				C418F80D28CE5E6600039C32 /* ReposList */,
 				C42F711228CD187400F96242 /* UsersList */,
-				C418F80D28CE5E6600039C32 /* Repos */,
 				C433ED5728D0B23600B4F0E5 /* RepoForks */,
 			);
 			path = Features;
 			sourceTree = "<group>";
 		};
-		C418F80D28CE5E6600039C32 /* Repos */ = {
+		C418F80D28CE5E6600039C32 /* ReposList */ = {
 			isa = PBXGroup;
 			children = (
-				C43D50CC28D00C010084D7C5 /* ViewModel */,
-				C43D50C328D008A20084D7C5 /* Cell */,
 				C418F80E28CE5E8D00039C32 /* View */,
+				C43D50CC28D00C010084D7C5 /* ViewModel */,
+				C433ED6828D0D69600B4F0E5 /* Model */,
 			);
-			path = Repos;
+			path = ReposList;
 			sourceTree = "<group>";
 		};
 		C418F80E28CE5E8D00039C32 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				C42F711728CD6E8800F96242 /* ReposListViewController.swift */,
-				C42F711828CD6E8800F96242 /* ReposListViewController.xib */,
+				C433ED6D28D0D7B200B4F0E5 /* ViewController */,
+				C43D50C328D008A20084D7C5 /* Cell */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -222,7 +215,6 @@
 			isa = PBXGroup;
 			children = (
 				C49F509228CBC15400C5CEAC /* EndpointProtocol.swift */,
-				C418F81928CE835600039C32 /* GithubEndpoint */,
 			);
 			path = Endpoints;
 			sourceTree = "<group>";
@@ -231,8 +223,6 @@
 			isa = PBXGroup;
 			children = (
 				C418F81428CE6F4300039C32 /* User.swift */,
-				C43D50C128D005750084D7C5 /* Repo.swift */,
-				C433ED6628D0D19600B4F0E5 /* Fork.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -280,19 +270,11 @@
 			path = Error;
 			sourceTree = "<group>";
 		};
-		C42F710728CCC6FE00F96242 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				C4A3403728CE372A004BC3CC /* UsersListCellViewModel.swift */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
 		C42F710A28CCC8A900F96242 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				C418F80928CE5D3800039C32 /* View */,
-				C42F710728CCC6FE00F96242 /* ViewModel */,
+				C42F710B28CCC8A900F96242 /* UsersListTableViewCell.swift */,
+				C42F710C28CCC8A900F96242 /* UsersListTableViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -310,7 +292,7 @@
 			children = (
 				C418F80A28CE5DAA00039C32 /* View */,
 				C418F80B28CE5DC600039C32 /* ViewModel */,
-				C42F710A28CCC8A900F96242 /* Cell */,
+				C418F81328CE6F1C00039C32 /* Models */,
 			);
 			path = UsersList;
 			sourceTree = "<group>";
@@ -334,9 +316,9 @@
 		C433ED5728D0B23600B4F0E5 /* RepoForks */ = {
 			isa = PBXGroup;
 			children = (
-				C433ED5D28D0B33F00B4F0E5 /* Cell */,
 				C433ED5828D0B33F00B4F0E5 /* View */,
 				C433ED5B28D0B33F00B4F0E5 /* ViewModel */,
+				C433ED6928D0D69F00B4F0E5 /* Model */,
 			);
 			path = RepoForks;
 			sourceTree = "<group>";
@@ -344,8 +326,8 @@
 		C433ED5828D0B33F00B4F0E5 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				C433ED5928D0B33F00B4F0E5 /* RepoForksListViewController.xib */,
-				C433ED5A28D0B33F00B4F0E5 /* RepoForksListViewController.swift */,
+				C433ED6E28D0D82600B4F0E5 /* ViewController */,
+				C433ED5D28D0B33F00B4F0E5 /* Cell */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -361,35 +343,62 @@
 		C433ED5D28D0B33F00B4F0E5 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				C433ED5E28D0B33F00B4F0E5 /* View */,
+				C433ED5F28D0B33F00B4F0E5 /* RepoForksListTableViewCell.xib */,
+				C433ED6028D0B33F00B4F0E5 /* RepoForksListTableViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
 		};
-		C433ED5E28D0B33F00B4F0E5 /* View */ = {
+		C433ED6828D0D69600B4F0E5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				C433ED5F28D0B33F00B4F0E5 /* RepoForksListTableViewCell.xib */,
-				C433ED6028D0B33F00B4F0E5 /* RepoForksListTableViewCell.swift */,
+				C43D50C128D005750084D7C5 /* Repo.swift */,
 			);
-			path = View;
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C433ED6928D0D69F00B4F0E5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C433ED6628D0D19600B4F0E5 /* Fork.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C433ED6A28D0D6F300B4F0E5 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C49F508A28CB93C200C5CEAC /* UsersListViewController.xib */,
+				C49F508928CB93C200C5CEAC /* UsersListViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		C433ED6D28D0D7B200B4F0E5 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C42F711728CD6E8800F96242 /* ReposListViewController.swift */,
+				C42F711828CD6E8800F96242 /* ReposListViewController.xib */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		C433ED6E28D0D82600B4F0E5 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C433ED5928D0B33F00B4F0E5 /* RepoForksListViewController.xib */,
+				C433ED5A28D0B33F00B4F0E5 /* RepoForksListViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		C43D50C328D008A20084D7C5 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				C43D50C628D009900084D7C5 /* View */,
-			);
-			path = Cell;
-			sourceTree = "<group>";
-		};
-		C43D50C628D009900084D7C5 /* View */ = {
-			isa = PBXGroup;
-			children = (
 				C43D50C728D009900084D7C5 /* ReposListTableViewCell.swift */,
 				C43D50C828D009900084D7C5 /* ReposListTableViewCell.xib */,
 			);
-			path = View;
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		C43D50CC28D00C010084D7C5 /* ViewModel */ = {
@@ -428,8 +437,6 @@
 				C49F502C28CB724000C5CEAC /* AppDelegate.swift */,
 				C49F502E28CB724000C5CEAC /* SceneDelegate.swift */,
 				C49F508D28CBBFED00C5CEAC /* Network */,
-				C418F81128CE5F2900039C32 /* Endpoints */,
-				C42F710F28CCCA4D00F96242 /* Services */,
 				C418F80C28CE5E4C00039C32 /* Features */,
 				C42F70FE28CCC66700F96242 /* Helpers */,
 				C49F503528CB724200C5CEAC /* Assets.xcassets */,
@@ -460,6 +467,7 @@
 			isa = PBXGroup;
 			children = (
 				C418F80F28CE5EAE00039C32 /* Core */,
+				C418F81128CE5F2900039C32 /* Endpoints */,
 			);
 			path = Network;
 			sourceTree = "<group>";
