@@ -175,8 +175,7 @@
 		C418F80C28CE5E4C00039C32 /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				C418F81928CE835600039C32 /* GithubEndpoint */,
-				C42F710F28CCCA4D00F96242 /* Services */,
+				C433ED6F28D0D89B00B4F0E5 /* Shared */,
 				C418F80D28CE5E6600039C32 /* ReposList */,
 				C42F711228CD187400F96242 /* UsersList */,
 				C433ED5728D0B23600B4F0E5 /* RepoForks */,
@@ -235,12 +234,12 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		C418F81928CE835600039C32 /* GithubEndpoint */ = {
+		C418F81928CE835600039C32 /* Endpoint */ = {
 			isa = PBXGroup;
 			children = (
 				C49F508E28CBBFED00C5CEAC /* GithubEndpoint.swift */,
 			);
-			path = GithubEndpoint;
+			path = Endpoint;
 			sourceTree = "<group>";
 		};
 		C42F70FE28CCC66700F96242 /* Helpers */ = {
@@ -279,12 +278,12 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
-		C42F710F28CCCA4D00F96242 /* Services */ = {
+		C42F710F28CCCA4D00F96242 /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				C42F711328CD228800F96242 /* GithubService */,
+				C42F711028CCCA4D00F96242 /* GithubService.swift */,
 			);
-			path = Services;
+			path = Service;
 			sourceTree = "<group>";
 		};
 		C42F711228CD187400F96242 /* UsersList */ = {
@@ -295,14 +294,6 @@
 				C418F81328CE6F1C00039C32 /* Models */,
 			);
 			path = UsersList;
-			sourceTree = "<group>";
-		};
-		C42F711328CD228800F96242 /* GithubService */ = {
-			isa = PBXGroup;
-			children = (
-				C42F711028CCCA4D00F96242 /* GithubService.swift */,
-			);
-			path = GithubService;
 			sourceTree = "<group>";
 		};
 		C42F711628CD38C400F96242 /* Observerable */ = {
@@ -390,6 +381,15 @@
 				C433ED5A28D0B33F00B4F0E5 /* RepoForksListViewController.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		C433ED6F28D0D89B00B4F0E5 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				C418F81928CE835600039C32 /* Endpoint */,
+				C42F710F28CCCA4D00F96242 /* Service */,
+			);
+			path = Shared;
 			sourceTree = "<group>";
 		};
 		C43D50C328D008A20084D7C5 /* Cell */ = {
