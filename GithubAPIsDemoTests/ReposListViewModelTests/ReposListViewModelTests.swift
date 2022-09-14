@@ -47,14 +47,15 @@ class ReposListViewModelTests: XCTestCase {
         XCTAssertTrue(viewModel.errorMessage.value != "")
     }
     
-    func testDidSelectReposAtIndex() {
+    func testDidSelectRepoAtIndex() {
         //given
-        viewModel.repos.value = [Repo.mock(name: "testName", description: "testDescription", license: License(name: "testLicense"))]
+        viewModel.repos.value = [Repo.mock(name: "test1", description: "testDescription", license: License(name: "testLicense")),
+                                 Repo.mock(name: "test2", description: "testDescription", license: License(name: "testLicense"))]
         
         //when
-        viewModel?.didSelectRepoAtIndex(index: 0)
+        viewModel?.didSelectRepoAtIndex(index: 1)
         
         //then
-        XCTAssertEqual(viewModel.naviagteToRepoForksScreen.value.repoName, "testName")
+        XCTAssertEqual(viewModel.naviagteToRepoForksScreen.value.repoName, "test2")
     }
 }

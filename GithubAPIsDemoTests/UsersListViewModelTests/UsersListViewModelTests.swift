@@ -47,14 +47,14 @@ class UsersListViewModelTests: XCTestCase {
         XCTAssertTrue(viewModel.errorMessage.value != "")
     }
     
-    func testDidSelectUsersAtIndex() {
+    func testDidSelectUserAtIndex() {
         //given
-        viewModel.users.value = [User.mock(username: "Hesham", avatarUrl: "Https://Test/image.png", numberOfFollowers: nil, numberOfPublicRepos: nil)]
+        viewModel.users.value = [User.mock(username: "Test1", avatarUrl: "Https://Test/image.png", numberOfFollowers: nil, numberOfPublicRepos: nil), User.mock(username: "Test2", avatarUrl: "Https://Test/image.png", numberOfFollowers: nil, numberOfPublicRepos: nil)]
         
         //when
-        viewModel?.didSelectUserAtIndex(index: 0)
+        viewModel?.didSelectUserAtIndex(index: 1)
         
         //then
-        XCTAssertEqual(viewModel.naviagteToReposScreen.value, "Hesham")
+        XCTAssertEqual(viewModel.naviagteToReposScreen.value, "Test2")
     }
 }
