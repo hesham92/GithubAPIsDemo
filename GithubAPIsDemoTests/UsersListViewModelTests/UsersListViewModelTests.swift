@@ -32,7 +32,7 @@ class UsersListViewModelTests: XCTestCase {
         XCTAssertTrue(viewModel.errorMessage.value == "")
     }
     
-    func testFetchCoachesList_failure() {
+    func testFetchUsers_failure() {
         //given
         serviceMock.fetchUsersCallBlock = { completion in
             completion(.failure(MockError()))
@@ -51,7 +51,7 @@ class UsersListViewModelTests: XCTestCase {
         //given
         viewModel.users.value = [User.mock(username: "Hesham", avatarUrl: "Https://Test/image.png", numberOfFollowers: nil, numberOfPublicRepos: nil)]
         //when
-        viewModel?.didSelectUsersAtIndex(index: 0)
+        viewModel?.didSelectUserAtIndex(index: 0)
         
         //then
         XCTAssertEqual(viewModel.naviagteToReposScreen.value, "Hesham")

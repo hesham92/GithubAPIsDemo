@@ -15,7 +15,7 @@ class UsersListViewModel {
     }
     
     // MARK: - View Actions
-    func didSelectUsersAtIndex(index: Int) {
+    func didSelectUserAtIndex(index: Int) {
         naviagteToReposScreen.value = users.value[index].username
     }
     

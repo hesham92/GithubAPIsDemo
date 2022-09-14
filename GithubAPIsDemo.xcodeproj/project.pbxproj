@@ -31,6 +31,8 @@
 		C43D50CA28D009900084D7C5 /* ReposListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43D50C728D009900084D7C5 /* ReposListTableViewCell.swift */; };
 		C43D50CB28D009900084D7C5 /* ReposListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C43D50C828D009900084D7C5 /* ReposListTableViewCell.xib */; };
 		C43D50CE28D00C220084D7C5 /* ReposListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43D50CD28D00C220084D7C5 /* ReposListViewModel.swift */; };
+		C442B92928D150E400E0C4AF /* ReposListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C442B92828D150E400E0C4AF /* ReposListViewModelTests.swift */; };
+		C442B92B28D1514C00E0C4AF /* Repo+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C442B92A28D1514C00E0C4AF /* Repo+Mock.swift */; };
 		C49F502D28CB724000C5CEAC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49F502C28CB724000C5CEAC /* AppDelegate.swift */; };
 		C49F502F28CB724000C5CEAC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49F502E28CB724000C5CEAC /* SceneDelegate.swift */; };
 		C49F503628CB724200C5CEAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C49F503528CB724200C5CEAC /* Assets.xcassets */; };
@@ -95,6 +97,8 @@
 		C43D50C728D009900084D7C5 /* ReposListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReposListTableViewCell.swift; sourceTree = "<group>"; };
 		C43D50C828D009900084D7C5 /* ReposListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReposListTableViewCell.xib; sourceTree = "<group>"; };
 		C43D50CD28D00C220084D7C5 /* ReposListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposListViewModel.swift; sourceTree = "<group>"; };
+		C442B92828D150E400E0C4AF /* ReposListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposListViewModelTests.swift; sourceTree = "<group>"; };
+		C442B92A28D1514C00E0C4AF /* Repo+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Repo+Mock.swift"; sourceTree = "<group>"; };
 		C49F502928CB724000C5CEAC /* GithubAPIsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GithubAPIsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C49F502C28CB724000C5CEAC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C49F502E28CB724000C5CEAC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -172,8 +176,8 @@
 		C418F80B28CE5DC600039C32 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				C4A3403728CE372A004BC3CC /* UsersListCellViewModel.swift */,
 				C42F710828CCC6FE00F96242 /* UsersListViewModel.swift */,
+				C4A3403728CE372A004BC3CC /* UsersListCellViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -421,6 +425,7 @@
 				C4C0215628D142AB0091277C /* User+Mock.swift */,
 				C4C0215E28D146BA0091277C /* MockError.swift */,
 				C4C0215428D1349F0091277C /* GithubServiceMock.swift */,
+				C442B92A28D1514C00E0C4AF /* Repo+Mock.swift */,
 			);
 			path = SharedMocks;
 			sourceTree = "<group>";
@@ -431,6 +436,14 @@
 				C49F504328CB724200C5CEAC /* UsersListViewModelTests.swift */,
 			);
 			path = UsersListViewModelTests;
+			sourceTree = "<group>";
+		};
+		C442B92728D150D900E0C4AF /* ReposListViewModelTests */ = {
+			isa = PBXGroup;
+			children = (
+				C442B92828D150E400E0C4AF /* ReposListViewModelTests.swift */,
+			);
+			path = ReposListViewModelTests;
 			sourceTree = "<group>";
 		};
 		C49F502028CB724000C5CEAC = {
@@ -475,6 +488,7 @@
 			children = (
 				C442B92528D14F3200E0C4AF /* SharedMocks */,
 				C442B92628D14F4600E0C4AF /* UsersListViewModelTests */,
+				C442B92728D150D900E0C4AF /* ReposListViewModelTests */,
 			);
 			path = GithubAPIsDemoTests;
 			sourceTree = "<group>";
@@ -782,6 +796,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C442B92928D150E400E0C4AF /* ReposListViewModelTests.swift in Sources */,
+				C442B92B28D1514C00E0C4AF /* Repo+Mock.swift in Sources */,
 				C4C0215728D142AB0091277C /* User+Mock.swift in Sources */,
 				C4C0215528D1349F0091277C /* GithubServiceMock.swift in Sources */,
 				C49F504428CB724200C5CEAC /* UsersListViewModelTests.swift in Sources */,

@@ -82,6 +82,6 @@ extension UsersListViewController: UITableViewDataSource {
 // MARK: - UITableViewDelegate
 extension UsersListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        viewModel.didSelectUsersAtIndex(index: indexPath.row)
+        viewModel.didSelectUserAtIndex(index: indexPath.row)
     }
 }
