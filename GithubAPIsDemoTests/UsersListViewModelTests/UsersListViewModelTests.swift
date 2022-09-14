@@ -50,6 +50,7 @@ class UsersListViewModelTests: XCTestCase {
     func testDidSelectUsersAtIndex() {
         //given
         viewModel.users.value = [User.mock(username: "Hesham", avatarUrl: "Https://Test/image.png", numberOfFollowers: nil, numberOfPublicRepos: nil)]
+        
         //when
         viewModel?.didSelectUserAtIndex(index: 0)
         
