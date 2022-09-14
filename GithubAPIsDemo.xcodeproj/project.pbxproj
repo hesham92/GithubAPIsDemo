@@ -42,7 +42,7 @@
 		C49F508C28CB93C200C5CEAC /* UsersListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C49F508A28CB93C200C5CEAC /* UsersListViewController.xib */; };
 		C49F509028CBBFED00C5CEAC /* GithubEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49F508E28CBBFED00C5CEAC /* GithubEndpoint.swift */; };
 		C49F509128CBBFED00C5CEAC /* HttpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49F508F28CBBFED00C5CEAC /* HttpService.swift */; };
-		C49F509328CBC15400C5CEAC /* EndpointProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49F509228CBC15400C5CEAC /* EndpointProtocol.swift */; };
+		C49F509328CBC15400C5CEAC /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49F509228CBC15400C5CEAC /* Endpoint.swift */; };
 		C4A3403828CE372A004BC3CC /* UsersListCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A3403728CE372A004BC3CC /* UsersListCellViewModel.swift */; };
 		C4C0215528D1349F0091277C /* GithubServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C0215428D1349F0091277C /* GithubServiceMock.swift */; };
 		C4C0215728D142AB0091277C /* User+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C0215628D142AB0091277C /* User+Mock.swift */; };
@@ -112,7 +112,7 @@
 		C49F508A28CB93C200C5CEAC /* UsersListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UsersListViewController.xib; sourceTree = "<group>"; };
 		C49F508E28CBBFED00C5CEAC /* GithubEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubEndpoint.swift; sourceTree = "<group>"; };
 		C49F508F28CBBFED00C5CEAC /* HttpService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpService.swift; sourceTree = "<group>"; };
-		C49F509228CBC15400C5CEAC /* EndpointProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointProtocol.swift; sourceTree = "<group>"; };
+		C49F509228CBC15400C5CEAC /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		C4A3403728CE372A004BC3CC /* UsersListCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListCellViewModel.swift; sourceTree = "<group>"; };
 		C4C0215428D1349F0091277C /* GithubServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubServiceMock.swift; sourceTree = "<group>"; };
 		C4C0215628D142AB0091277C /* User+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+Mock.swift"; sourceTree = "<group>"; };
@@ -216,16 +216,9 @@
 			isa = PBXGroup;
 			children = (
 				C49F508F28CBBFED00C5CEAC /* HttpService.swift */,
+				C49F509228CBC15400C5CEAC /* Endpoint.swift */,
 			);
 			path = Core;
-			sourceTree = "<group>";
-		};
-		C418F81128CE5F2900039C32 /* Endpoints */ = {
-			isa = PBXGroup;
-			children = (
-				C49F509228CBC15400C5CEAC /* EndpointProtocol.swift */,
-			);
-			path = Endpoints;
 			sourceTree = "<group>";
 		};
 		C418F81328CE6F1C00039C32 /* Model */ = {
@@ -446,6 +439,15 @@
 			path = ReposListViewModelTests;
 			sourceTree = "<group>";
 		};
+		C442B92C28D155C800E0C4AF /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				C49F502C28CB724000C5CEAC /* AppDelegate.swift */,
+				C49F502E28CB724000C5CEAC /* SceneDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
 		C49F502028CB724000C5CEAC = {
 			isa = PBXGroup;
 			children = (
@@ -471,8 +473,7 @@
 		C49F502B28CB724000C5CEAC /* GithubAPIsDemo */ = {
 			isa = PBXGroup;
 			children = (
-				C49F502C28CB724000C5CEAC /* AppDelegate.swift */,
-				C49F502E28CB724000C5CEAC /* SceneDelegate.swift */,
+				C442B92C28D155C800E0C4AF /* AppDelegate */,
 				C49F508D28CBBFED00C5CEAC /* Network */,
 				C418F80C28CE5E4C00039C32 /* Features */,
 				C42F70FE28CCC66700F96242 /* Helpers */,
@@ -497,7 +498,6 @@
 			isa = PBXGroup;
 			children = (
 				C418F80F28CE5EAE00039C32 /* Core */,
-				C418F81128CE5F2900039C32 /* Endpoints */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -784,7 +784,7 @@
 				C49F502F28CB724000C5CEAC /* SceneDelegate.swift in Sources */,
 				C42F711128CCCA4D00F96242 /* GithubService.swift in Sources */,
 				C42F710628CCC66700F96242 /* ErrorViewShowing.swift in Sources */,
-				C49F509328CBC15400C5CEAC /* EndpointProtocol.swift in Sources */,
+				C49F509328CBC15400C5CEAC /* Endpoint.swift in Sources */,
 				C43D50CE28D00C220084D7C5 /* ReposListViewModel.swift in Sources */,
 				C42F710928CCC6FE00F96242 /* UsersListViewModel.swift in Sources */,
 				C418F81828CE811700039C32 /* String+extension.swift in Sources */,
