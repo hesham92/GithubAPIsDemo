@@ -50,6 +50,7 @@ class ReposListViewModelTests: XCTestCase {
     func testDidSelectReposAtIndex() {
         //given
         viewModel.repos.value = [Repo.mock(name: "testName", description: "testDescription", license: License(name: "testLicense"))]
+        
         //when
         viewModel?.didSelectRepoAtIndex(index: 0)
         
